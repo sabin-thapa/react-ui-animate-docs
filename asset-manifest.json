@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-ui-animate-docs/static/css/main.f68e2846.chunk.css",
-    "main.js": "/react-ui-animate-docs/static/js/main.19dca20b.chunk.js",
-    "main.js.map": "/react-ui-animate-docs/static/js/main.19dca20b.chunk.js.map",
-    "runtime-main.js": "/react-ui-animate-docs/static/js/runtime-main.d2269e4d.js",
-    "runtime-main.js.map": "/react-ui-animate-docs/static/js/runtime-main.d2269e4d.js.map",
-    "static/css/2.bec3bd0f.chunk.css": "/react-ui-animate-docs/static/css/2.bec3bd0f.chunk.css",
-    "static/js/2.5de391d9.chunk.js": "/react-ui-animate-docs/static/js/2.5de391d9.chunk.js",
-    "static/js/2.5de391d9.chunk.js.map": "/react-ui-animate-docs/static/js/2.5de391d9.chunk.js.map",
-    "index.html": "/react-ui-animate-docs/index.html",
-    "static/css/2.bec3bd0f.chunk.css.map": "/react-ui-animate-docs/static/css/2.bec3bd0f.chunk.css.map",
-    "static/css/main.f68e2846.chunk.css.map": "/react-ui-animate-docs/static/css/main.f68e2846.chunk.css.map",
-    "static/js/2.5de391d9.chunk.js.LICENSE.txt": "/react-ui-animate-docs/static/js/2.5de391d9.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/react-ui-animate-docs/static/media/RobotoRegular.a8d6ac03.ttf"
+    "main.css": "/static/css/main.216e75ea.chunk.css",
+    "main.js": "/static/js/main.19dca20b.chunk.js",
+    "main.js.map": "/static/js/main.19dca20b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ae4eebc9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ae4eebc9.js.map",
+    "static/css/2.bec3bd0f.chunk.css": "/static/css/2.bec3bd0f.chunk.css",
+    "static/js/2.5de391d9.chunk.js": "/static/js/2.5de391d9.chunk.js",
+    "static/js/2.5de391d9.chunk.js.map": "/static/js/2.5de391d9.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.bec3bd0f.chunk.css.map": "/static/css/2.bec3bd0f.chunk.css.map",
+    "static/css/main.216e75ea.chunk.css.map": "/static/css/main.216e75ea.chunk.css.map",
+    "static/js/2.5de391d9.chunk.js.LICENSE.txt": "/static/js/2.5de391d9.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/static/media/RobotoRegular.a8d6ac03.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2269e4d.js",
+    "static/js/runtime-main.ae4eebc9.js",
     "static/css/2.bec3bd0f.chunk.css",
     "static/js/2.5de391d9.chunk.js",
-    "static/css/main.f68e2846.chunk.css",
+    "static/css/main.216e75ea.chunk.css",
     "static/js/main.19dca20b.chunk.js"
   ]
 }
