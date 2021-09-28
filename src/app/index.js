@@ -5,7 +5,8 @@ import { publicPaths, privatePaths } from "./routes.app";
 import { userRoles, userType } from "./userRoles.app";
 
 // IMPORT COMMONS
-import { Header, SideNav } from "./commons";
+import { Header, SideNav, Label } from "./commons";
+import { CompWrapper } from "./hocs";
 
 const App = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -22,9 +23,10 @@ const App = () => {
 
       <SideNav />
 
-      <div className="app">
+      <CompWrapper>
+        <Label>Version: 1.x</Label>
         <Auth.Screens />
-      </div>
+      </CompWrapper>
     </Auth.Provider>
   );
 };
