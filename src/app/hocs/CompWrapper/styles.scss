@@ -1,4 +1,8 @@
 .compwrapper {
   margin-top: 100px;
   margin-left: 300px;
+
+  @include responsive-for(md) {
+    margin-left: 20px;
+  }
 }

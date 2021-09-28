@@ -1,8 +1,10 @@
 import React from "react";
 import { useAuth } from "react-auth-navigation";
 
+import { MdMenu, MdClose } from "react-icons/all";
+
 export const Header = () => {
-  const { setDrawerOpen } = useAuth();
+  const { drawerOpen, setDrawerOpen } = useAuth();
   return (
     <div className="header">
       <nav className="header__wrapper">
@@ -10,7 +12,7 @@ export const Header = () => {
           className="header__menu"
           onClick={() => setDrawerOpen((prev) => !prev)}
         >
-          MENU
+          {drawerOpen ? <MdClose /> : <MdMenu />}
         </div>
 
         <h2 className="header__title">React UI Animate</h2>
