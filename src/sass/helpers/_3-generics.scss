@@ -1,0 +1,15 @@
+// @override SLICK DOTS
+.slick-dots {
+  li {
+    button:before {
+      color: $grey100;
+      font-size: 10px;
+    }
+
+    &.slick-active {
+      button:before {
+        color: $teal;
+      }
+    }
+  }
+}

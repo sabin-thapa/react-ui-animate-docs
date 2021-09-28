@@ -1,0 +1,17 @@
+@font-face {
+  src: url("../../assets/fonts/RobotoRegular.ttf");
+  font-family: Roboto;
+}
+
+@import "./1-variables", "./2-mixins", "./3-generics";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "Montserrat", "Raleway", "Tahoma";
+}
+
+html {
+  scroll-behavior: smooth;
+}

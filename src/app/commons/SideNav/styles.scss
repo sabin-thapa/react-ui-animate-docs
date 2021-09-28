@@ -1,0 +1,95 @@
+.sidenav {
+  &-web {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: $white;
+    z-index: 9;
+    border-right: 1px solid $grey200;
+    padding: 20px;
+    top: 75px;
+    overflow-y: auto;
+    padding-bottom: 85px;
+    display: block;
+
+    @include scrollbar(4px, $grey200, $grey200, $grey200);
+
+    @media all and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: $white;
+    z-index: 9;
+    border-right: 1px solid $grey200;
+    padding: 20px;
+    top: 75px;
+    overflow-y: auto;
+    @include scrollbar(4px, $grey200, $grey200, $grey200);
+    padding-bottom: 85px;
+    display: none;
+
+    @media all and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__nav-group {
+    margin: 20px 0;
+  }
+
+  &__title {
+    cursor: pointer;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+
+    .sidenav-title {
+      user-select: none;
+    }
+
+    .dropdownicon {
+      color: $black;
+      position: relative;
+      top: 2px;
+      transition: transform 0.2s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__navitems {
+    list-style: none;
+    margin-top: 5px;
+    user-select: none;
+  }
+
+  &__navitem {
+    padding: 2px 0px;
+    color: $black;
+  }
+
+  &__navlink {
+    text-decoration: none;
+    color: $black;
+    display: block;
+    border-radius: 4px;
+    padding: 8px 10px;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: $blue;
+    }
+
+    &--active {
+      color: $blue;
+      background: $blue;
+    }
+  }
+}
