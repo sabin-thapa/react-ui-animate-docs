@@ -1,1 +1,2 @@
-export * from "./NavGroup";
+export * from "./NavGroup.component";
+export * from "./ParentGroup.component";

@@ -1,2 +1,3 @@
 export * from "./notFound";
-export * from "./dashboard";
+export * from "./about";
+export * from "./gettingStarted";

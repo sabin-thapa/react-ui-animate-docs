@@ -13,12 +13,12 @@ export const Header = () => {
           MENU
         </div>
 
-        <h2 className="header__title">React UI Comp</h2>
+        <h2 className="header__title">React UI Animate</h2>
 
         <div className="npmversion">
-          <a href="https://badge.fury.io/js/react-uicomp">
+          <a href="https://badge.fury.io/js/react-ui-animate">
             <img
-              src="https://badge.fury.io/js/react-uicomp.svg"
+              src="https://badge.fury.io/js/react-ui-animate.svg"
               alt="npm version"
               style={{
                 width: 220 / 2,

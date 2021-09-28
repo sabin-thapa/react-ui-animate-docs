@@ -1,18 +1,39 @@
 .sidenav {
-  &-web {
+  %sidenav {
     position: fixed;
     width: 280px;
     height: 100%;
     background-color: $white;
     z-index: 9;
-    border-right: 1px solid $grey200;
+    border-right: 1px solid $grey300;
     padding: 20px;
     top: 75px;
     overflow-y: auto;
     padding-bottom: 85px;
-    display: block;
 
-    @include scrollbar(4px, $grey200, $grey200, $grey200);
+    @include scrollbar(4px, $grey200, $grey400, $grey100);
+  }
+
+  %link-item {
+    text-decoration: none;
+    color: $black;
+    display: block;
+    border-radius: 4px;
+    padding: 8px 10px;
+
+    &:hover {
+      background: $grey300;
+    }
+
+    &.active {
+      background: $primary200;
+      color: $white;
+    }
+  }
+
+  &-web {
+    @extend %sidenav;
+    display: block;
 
     @media all and (max-width: 768px) {
       display: none;
@@ -20,17 +41,7 @@
   }
 
   &-mobile {
-    position: fixed;
-    width: 280px;
-    height: 100%;
-    background-color: $white;
-    z-index: 9;
-    border-right: 1px solid $grey200;
-    padding: 20px;
-    top: 75px;
-    overflow-y: auto;
-    @include scrollbar(4px, $grey200, $grey200, $grey200);
-    padding-bottom: 85px;
+    @extend %sidenav;
     display: none;
 
     @media all and (max-width: 768px) {
@@ -38,58 +49,60 @@
     }
   }
 
-  &__nav-group {
-    margin: 20px 0;
-  }
+  &-nav-group {
+    margin-bottom: 10px;
 
-  &__title {
-    cursor: pointer;
-    color: $black;
-    display: flex;
-    justify-content: space-between;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      cursor: pointer;
 
-    .sidenav-title {
-      user-select: none;
+      &-text {
+        font-weight: bold;
+        color: $black100;
+      }
+
+      .dropdownicon {
+        color: $black100;
+      }
     }
 
-    .dropdownicon {
-      color: $black;
-      position: relative;
-      top: 2px;
-      transition: transform 0.2s;
+    &-list {
+      list-style: none;
 
-      &.active {
-        transform: rotate(180deg);
+      &-items {
+        margin-top: 5px;
+        user-select: none;
+
+        .link-item {
+          @extend %link-item;
+        }
       }
     }
   }
 
-  &__navitems {
-    list-style: none;
-    margin-top: 5px;
-    user-select: none;
-  }
+  // PARENT GROUP
+  &-parent-group {
+    margin-bottom: 30px;
 
-  &__navitem {
-    padding: 2px 0px;
-    color: $black;
-  }
-
-  &__navlink {
-    text-decoration: none;
-    color: $black;
-    display: block;
-    border-radius: 4px;
-    padding: 8px 10px;
-    transition: background 0.2s, color 0.2s;
-
-    &:hover {
-      background: $blue;
+    &-title {
+      color: #a1a1a1;
     }
 
-    &--active {
-      color: $blue;
-      background: $blue;
+    &-list {
+      margin-top: 20px;
+      list-style-type: none;
+
+      &-item {
+        margin-top: 5px;
+        user-select: none;
+
+        .link-item {
+          @extend %link-item;
+        }
+      }
     }
   }
 }
