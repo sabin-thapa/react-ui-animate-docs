@@ -1,7 +1,5 @@
 import React from "react";
 
-const Title = ({ children }) => {
+export const Title = ({ children }) => {
   return <h1 className="title">{children}</h1>;
 };
-
-export default Title;
