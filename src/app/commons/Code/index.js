@@ -9,6 +9,7 @@ export const Code = ({ children }) => {
       className="line-numbers"
       style={{
         borderRadius: 4,
+        maxHeight: 500,
       }}
     >
       <code className="language-js">{children.trim()}</code>

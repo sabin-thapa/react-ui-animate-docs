@@ -7,3 +7,4 @@ export * from "./Title";
 export * from "./SecondaryTitle";
 export * from "./Highlight";
 export * from "./Section";
+export * from "./Box";
