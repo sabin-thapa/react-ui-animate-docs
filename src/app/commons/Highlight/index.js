@@ -6,13 +6,13 @@ export const Highlight = ({ children, link }) => {
   const { navigate } = navigation;
 
   return (
-    <span
+    <div
       onClick={() => {
         link && navigate(link);
       }}
       className={link ? "highlight link" : "highlight"}
     >
       {children}
-    </span>
+    </div>
   );
 };

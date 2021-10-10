@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigation } from "react-auth-navigation";
 
-import { NotFound, About, GettingStarted } from "./pages";
+import { NotFound, About, GettingStarted, AnimatedValues } from "./pages";
 
 export const Redirect = ({ to }) => {
   const {
@@ -45,7 +45,7 @@ export const publicPaths = [
       {
         name: "Animated Values",
         path: "/animated-values",
-        component: GettingStarted,
+        component: AnimatedValues,
         restricted: true,
       },
       {
