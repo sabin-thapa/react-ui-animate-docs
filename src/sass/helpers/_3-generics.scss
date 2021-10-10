@@ -13,3 +13,38 @@
     }
   }
 }
+
+// TABLE
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid $grey200;
+
+  tr {
+    border-bottom: 1px solid $grey200;
+
+    %table-padding {
+      padding: 15px;
+    }
+
+    th {
+      text-align: left;
+      color: darken($grey100, 20%);
+      @extend %table-padding;
+    }
+
+    td {
+      @extend %table-padding;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: $grey300;
+  }
+
+  thead {
+    tr {
+      background: darken($grey300, 2%);
+    }
+  }
+}

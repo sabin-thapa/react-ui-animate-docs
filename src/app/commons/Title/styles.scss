@@ -1,12 +1,12 @@
 .title {
   margin-bottom: 20px;
-  font-size: $large;
-  font-family: $avertaSemiBold;
+  font-size: 20px;
   color: $black;
+  font-weight: bold;
 
   &--secondary {
     margin: 2rem 0 1rem 0;
-    font-size: $extrasmall;
+    font-size: 18px;
     color: $black;
   }
 }
