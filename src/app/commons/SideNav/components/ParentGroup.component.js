@@ -13,7 +13,7 @@ export const ParentGroup = ({ title, items }) => {
           if (item.items) {
             const { name, items } = item;
 
-            return <NavGroup title={name} navItems={items} />;
+            return <NavGroup key={index} title={name} navItems={items} />;
           } else {
             const { name, path } = item;
 

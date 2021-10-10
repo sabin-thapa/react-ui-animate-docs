@@ -25,7 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.0.2",
-    "react-ui-animate": "^1.1.6",
+    "react-ui-animate": "^1.1.8",
     "react-uicomp": "^3.0.1",
     "react-zoom-pan-pinch": "^2.0.2",
     "read-excel-file": "^5.2.1",

@@ -17,10 +17,17 @@ export const Redirect = ({ to }) => {
 
 export const publicPaths = [
   {
+    name: "Root",
+    path: "/",
+    component: () => <Redirect to="/docs/about" />,
+    restricted: true,
+  },
+  {
     name: "DocsRoot",
     path: "/docs",
     component: () => <Redirect to="/docs/about" />,
     visible: false,
+    restricted: true,
     subPaths: [
       // Fundamentals
       {
