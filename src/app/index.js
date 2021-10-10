@@ -24,7 +24,7 @@ const App = () => {
       <SideNav />
 
       <CompWrapper>
-        <Label>Version: 1.x</Label>
+        <Label>Version: 1.1.x</Label>
         <Auth.Screens />
       </CompWrapper>
     </Auth.Provider>
