@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   Title,
@@ -10,6 +10,10 @@ import {
 } from "../../commons";
 
 export const GettingStarted = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Section>
@@ -105,7 +109,8 @@ export default function () {
 `}
         </Code>
         <Paragraph>
-          In next section we will cover <Highlight>Animated Values</Highlight>.
+          In next section we will cover{" "}
+          <Highlight link="/docs/animated-values">Animated Values</Highlight>.
         </Paragraph>
       </Section>
     </>
