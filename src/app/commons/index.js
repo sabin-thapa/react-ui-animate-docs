@@ -5,3 +5,5 @@ export * from "./Label";
 export * from "./Paragraph";
 export * from "./Title";
 export * from "./SecondaryTitle";
+export * from "./Highlight";
+export * from "./Section";

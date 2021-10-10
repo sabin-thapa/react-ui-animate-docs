@@ -1,0 +1,9 @@
+.highlight {
+  background: darken($grey300, 2%);
+  border: 1px solid darken($grey300, 10%);
+  border-radius: 4px;
+  color: $primary200;
+  display: inline-block;
+  padding: 0px 10px;
+  margin: 0px 2px;
+}

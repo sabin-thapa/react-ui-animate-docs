@@ -1,11 +1,18 @@
 import React from "react";
 
-import { Title, SecondaryTitle, Paragraph } from "../../commons";
+import {
+  Title,
+  SecondaryTitle,
+  Paragraph,
+  Highlight,
+  Code,
+  Section,
+} from "../../commons";
 
 export const GettingStarted = () => {
   return (
     <>
-      <section>
+      <Section>
         <Title>Getting started</Title>
 
         <Paragraph>
@@ -17,9 +24,9 @@ export const GettingStarted = () => {
           advanced parts of React UI Animate. It covers all the basic concept of
           all APIs and API References provided by React UI Animate.
         </Paragraph>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <SecondaryTitle>Pre-requisites</SecondaryTitle>
 
         <Paragraph>
@@ -28,19 +35,79 @@ export const GettingStarted = () => {
           some basic knowledge of Javascript and React, then you are ready to
           go.
         </Paragraph>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <SecondaryTitle>Minimun requirements</SecondaryTitle>
 
-        <Paragraph>Some description</Paragraph>
-      </section>
+        <Paragraph>
+          <ul className="spaced">
+            <li>
+              <Highlight>react</Highlight>
+              {" >= 16.13.1"}
+            </li>
+            <li>
+              <Highlight>react-dom</Highlight>
+              {" >= 16.13.1"}
+            </li>
+          </ul>
+        </Paragraph>
+      </Section>
 
-      <section>
+      <Section>
         <SecondaryTitle>Installation</SecondaryTitle>
 
-        <Paragraph>Some description</Paragraph>
-      </section>
+        <Paragraph>In you project directory, run:</Paragraph>
+
+        <Paragraph>
+          <Code>
+            {`
+// npm
+npm install react-uicomp
+
+// yarn
+yarn add react-uicomp
+`}
+          </Code>
+        </Paragraph>
+        <Paragraph>
+          After installation you are ready to implement your own gestures and
+          animation on your project. Let's write a simple demo where an elements
+          opacity is animated from 0 to 1 when we click a button:
+        </Paragraph>
+
+        <Code>
+          {`
+import { AnimatedBlock, useAnimatedValue } from "react-ui-animate";
+
+export default function () {
+  const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
+
+  return (
+    <div>
+      {/* AnimatedBlock component can read useAnimatedValue() */}
+      <AnimatedBlock
+        style={{
+          opacity: opacity.value, // using opacity with value property
+          width: 100,
+          padding: 20,
+          background: "#39F",
+        }}
+      >
+        ANIMATED
+      </AnimatedBlock>
+
+      {/* Assigning value to 1 auto animates from initialized value 0 to 1 smoothly */}
+      <button onClick={() => (opacity.value = 1)}>Animate Me</button>
+    </div>
+  );
+}
+`}
+        </Code>
+        <Paragraph>
+          In next section we will cover <Highlight>Animated Values</Highlight>.
+        </Paragraph>
+      </Section>
     </>
   );
 };
