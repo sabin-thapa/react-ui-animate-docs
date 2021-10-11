@@ -100,7 +100,7 @@ export const SideNav = () => {
                 transform: interpolate(
                   animation.value,
                   [0, 1],
-                  ["translateX(-280px)", "translateX(0px)"]
+                  ["translateX(-340px)", "translateX(0px)"]
                 ),
               }}
               className="sidenav-mobile"

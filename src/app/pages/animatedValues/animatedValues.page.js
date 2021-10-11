@@ -23,21 +23,24 @@ export const AnimatedValues = () => {
         <Paragraph>
           Animated Values are the fundamental concepts behind{" "}
           <Highlight>react-ui-animate</Highlight>. They carry animated data,
-          providing easy way to drive animations. There are mainly two kinds of
-          animated values in React UI Animate. One is{" "}
-          <Highlight>useAnimatedValue()</Highlight> and other one is{" "}
-          <Highlight>useMountedValue()</Highlight>.
+          providing easy way to drive animations.
         </Paragraph>
       </Section>
 
       <Section>
-        <SecondaryTitle>useAnimatedValue()</SecondaryTitle>
+        <SecondaryTitle>
+          Animated transitions with Animated Value
+        </SecondaryTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>
+          <Highlight>useAnimatedValue</Highlight> is a hook that returns an
+          object containing properties like: <Highlight>value</Highlight>,{" "}
+          <Highlight>currentValue</Highlight>, etc.
+        </Paragraph>
       </Section>
 
       <Section>
-        <SecondaryTitle>useMountedValue()</SecondaryTitle>
+        <SecondaryTitle>Mounting and Unmounting Components</SecondaryTitle>
 
         <Paragraph>Description</Paragraph>
       </Section>
