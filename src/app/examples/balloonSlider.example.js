@@ -26,58 +26,66 @@ export function BalloonSlider() {
   });
 
   return (
-    <div style={{ width: 300, position: "relative" }}>
-      <AnimatedBlock
-        style={{
-          width: 60,
-          height: 60,
-          borderRadius: "50%",
-          border: "5px solid #b55ae6",
-          position: "absolute",
-          left: balloonLeft.value,
-          translateX: -20,
-          top: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          translateY: interpolate(isDown.value, [0, 1], [80, 0]),
-          scale: isDown.value,
-          opacity: isDown.value,
-          rotate: interpolate(velocity.value, [-2, 2], [30, -30]),
-        }}
-      >
-        {left.value}
-      </AnimatedBlock>
-
-      <div style={{ position: "relative", height: 20, marginTop: 100 }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginTop: 115,
+      }}
+    >
+      <div style={{ width: 300, position: "relative" }}>
         <AnimatedBlock
-          {...bind()}
           style={{
-            width: 20,
-            height: 20,
+            width: 60,
+            height: 60,
             borderRadius: "50%",
-            border: "5px solid #3399ff",
-            backgroundColor: "#fff",
-            cursor: "grab",
+            border: "5px solid #b55ae6",
             position: "absolute",
+            left: balloonLeft.value,
+            translateX: -20,
             top: 0,
-            left: left.value,
-            zIndex: 2,
-            scale: interpolate(isDown.value, [0, 1], [1, 1.3]),
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            translateY: interpolate(isDown.value, [0, 1], [80, 0]),
+            scale: isDown.value,
+            opacity: isDown.value,
+            rotate: interpolate(velocity.value, [-2, 2], [30, -30]),
           }}
-        />
+        >
+          {left.value}
+        </AnimatedBlock>
 
-        <div
-          style={{
-            width: 300,
-            height: 4,
-            backgroundColor: "#e1e1e1",
-            position: "absolute",
-            bottom: 8,
-            left: 0,
-            userSelect: "none",
-          }}
-        />
+        <div style={{ position: "relative", height: 20, marginTop: 100 }}>
+          <AnimatedBlock
+            {...bind()}
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: "50%",
+              border: "5px solid #3399ff",
+              backgroundColor: "#fff",
+              cursor: "grab",
+              position: "absolute",
+              top: 0,
+              left: left.value,
+              zIndex: 2,
+              scale: interpolate(isDown.value, [0, 1], [1, 1.3]),
+            }}
+          />
+
+          <div
+            style={{
+              width: 300,
+              height: 4,
+              backgroundColor: "#e1e1e1",
+              position: "absolute",
+              bottom: 8,
+              left: 0,
+              userSelect: "none",
+            }}
+          />
+        </div>
       </div>
     </div>
   );

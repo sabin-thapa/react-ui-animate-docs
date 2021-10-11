@@ -10,6 +10,8 @@ import {
   NextPrevButton,
 } from "../../commons";
 
+import { AnimatedSearch, BalloonSlider, HamburderMenu } from "../../examples";
+
 export const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -52,37 +54,76 @@ export const About = () => {
           .
         </Paragraph>
 
-        <div style={{ margin: "10px 0px" }}>1. Animated Search Bar</div>
-        <iframe
-          src="https://codesandbox.io/embed/animated-search-bar-using-react-ui-animate-r28rf?fontsize=14&hidenavigation=1&theme=dark"
+        <div
           style={{
-            width: "100%",
-            height: "500px",
-            border: "0",
-            borderRadius: "4px",
-            overflow: "hidden",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            rowGap: "20px",
+            columnGap: "20px",
           }}
-          title="Animated Search Bar using react-ui-animate"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
+        >
+          <div
+            style={{
+              backgroundColor: "#f1f1f1",
+              height: 500,
+              borderRadius: 10,
+            }}
+          >
+            <div
+              style={{
+                color: "#a1a1a1",
+                margin: 20,
+                position: "absolute",
+              }}
+            >
+              Animated Search Bar
+            </div>
+            <AnimatedSearch />
+          </div>
 
-        <Box mt={20} />
+          <div
+            style={{
+              backgroundColor: "#f1f1f1",
+              height: 500,
+              borderRadius: 10,
+            }}
+          >
+            <div
+              style={{
+                color: "#a1a1a1",
+                margin: 20,
+                position: "absolute",
+              }}
+            >
+              Custom Animated Balloon Slider
+            </div>
+            <BalloonSlider />
+          </div>
 
-        <div style={{ margin: "10px 0px" }}>2. Animated Balloon Slider</div>
-        <iframe
-          src="https://codesandbox.io/embed/balloon-slider-animation-12c2t?fontsize=14&hidenavigation=1&theme=dark"
-          style={{
-            width: "100%",
-            height: "500px",
-            border: "0",
-            borderRadius: "4px",
-            overflow: "hidden",
-          }}
-          title="Balloon Slider Animation"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
+          <div
+            style={{
+              backgroundColor: "#f1f1f1",
+              height: 500,
+              borderRadius: 10,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                color: "#a1a1a1",
+                position: "absolute",
+                left: 20,
+                top: 20,
+              }}
+            >
+              Hamburger Menu
+            </div>
+            <HamburderMenu />
+          </div>
+        </div>
 
         <NextPrevButton
           right={{ text: "Getting Started", to: "/docs/getting-started" }}
