@@ -31,13 +31,26 @@ export const About = () => {
       <Section>
         <SecondaryTitle>Motivation &amp; Library overview</SecondaryTitle>
 
-        <Paragraph></Paragraph>
-      </Section>
-
-      <Section>
-        <SecondaryTitle>Problems and Limitations</SecondaryTitle>
-
-        <Paragraph></Paragraph>
+        <Paragraph>
+          In todays world, interactive and smooth web applications are preferred
+          by everyone. Animations on web without any performance drops is very
+          important and also we want controlled animations.
+          <Highlight
+            external
+            link="https://www.npmjs.com/package/react-ui-animate"
+          >
+            react-ui-animate
+          </Highlight>{" "}
+          is a great tool for creating smooth animations as well as gesture
+          interaction on web. It provides very simple and easy APIs to create
+          very powerful and smooth animation without any performance issues. And
+          it also provides different easy to use hooks for gesture interactions.
+          This library represents a modern way of animating and creating gesture
+          based interaction on web. The UI can be animated without any
+          perfomance issues and it also supports powerful interpolation. It does
+          not cast any re-renders and affects any of your views. It simply
+          animates the way you want your view to animate.
+        </Paragraph>
       </Section>
 
       <Section>
