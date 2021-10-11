@@ -8,6 +8,7 @@ import {
   Code,
   Section,
   Box,
+  NextPrevButton,
 } from "../../commons";
 import { AnimatedSearch, HamburderMenu, BalloonSlider } from "../../examples";
 
@@ -298,7 +299,7 @@ export function BalloonSlider() {
     } else {
       offsetLeft.current = ballX;
     }
-  }, []);
+  });
 
   return (
     <div style={{ width: 300, position: "relative" }}>
@@ -371,6 +372,10 @@ export function BalloonSlider() {
             <BalloonSlider />
           </Box>
         </Box>
+
+        <NextPrevButton
+          right={{ text: "Getting Started", to: "/docs/getting-started" }}
+        />
       </Section>
     </>
   );

@@ -1,0 +1,56 @@
+.nextprev {
+  margin: 40px 0px 60px 0px;
+
+  &-button {
+    padding: 16px 30px;
+    background: $white;
+    border: 1px solid $grey200;
+    border-radius: 10px;
+    width: 60%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+
+    &-label {
+      position: absolute;
+      font-size: 16px;
+      color: $black200;
+      text-decoration: underline;
+    }
+
+    &-text {
+      font-size: 16px;
+      margin-top: 18px;
+      color: $primary200;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      background-color: $grey400;
+      border-color: $primary200;
+
+      .nextprev-button-label {
+        text-decoration: none;
+      }
+
+      .nextprev-button-text {
+        text-decoration: none;
+      }
+    }
+
+    &.right {
+      justify-content: flex-end;
+
+      .nextprev-button-label {
+        right: 35px;
+      }
+    }
+
+    &.left {
+      .nextprev-button-label {
+        left: 35px;
+      }
+    }
+  }
+}

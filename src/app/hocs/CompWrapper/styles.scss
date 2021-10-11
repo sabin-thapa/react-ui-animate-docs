@@ -1,7 +1,7 @@
 .compwrapper {
   margin-top: 100px;
   margin-left: 300px;
-  // margin-right: (100% - $default_width) / 2;
+  // margin-right: 40%;
   margin-right: 50px;
 
   @include responsive-for(md) {

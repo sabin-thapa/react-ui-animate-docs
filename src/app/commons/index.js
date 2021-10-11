@@ -8,3 +8,4 @@ export * from "./SecondaryTitle";
 export * from "./Highlight";
 export * from "./Section";
 export * from "./Box";
+export * from "./NextPrevButton";

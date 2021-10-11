@@ -23,7 +23,7 @@ export function BalloonSlider() {
     } else {
       offsetLeft.current = ballX;
     }
-  }, []);
+  });
 
   return (
     <div style={{ width: 300, position: "relative" }}>
