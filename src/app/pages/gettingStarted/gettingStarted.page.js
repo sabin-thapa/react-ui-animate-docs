@@ -65,12 +65,12 @@ export const GettingStarted = () => {
         <Paragraph>In you project directory, run:</Paragraph>
 
         <Paragraph>
-          <Code>
+          <Code language="bash">
             {`// npm
-npm install react-uicomp
+npm install react-ui-animate
 
 // yarn
-yarn add react-uicomp
+yarn add react-ui-animate
 `}
           </Code>
         </Paragraph>

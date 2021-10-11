@@ -35,7 +35,12 @@ export const AnimatedValues = () => {
         <Paragraph>
           <Highlight>useAnimatedValue</Highlight> is a hook that returns an
           object containing properties like: <Highlight>value</Highlight>,{" "}
-          <Highlight>currentValue</Highlight>, etc.
+          <Highlight>currentValue</Highlight>, etc. Animated Value objects serve
+          as references to pieces of shared animation data that can be accessed
+          and modified using their <Highlight>.value</Highlight> property. It is
+          important to remember that
+          <Highlight>.value</Highlight> property must be used to modify or to
+          read data.
         </Paragraph>
       </Section>
 
