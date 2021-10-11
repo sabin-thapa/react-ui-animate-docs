@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 import { useNavigation } from "react-auth-navigation";
 
-import { NotFound, About, GettingStarted, AnimatedValues } from "./pages";
+import {
+  NotFound,
+  About,
+  GettingStarted,
+  AnimatedValues,
+  Interpolation,
+} from "./pages";
 
 export const Redirect = ({ to }) => {
   const {
@@ -51,7 +57,7 @@ export const publicPaths = [
       {
         name: "Interpolation",
         path: "/interpolation",
-        component: GettingStarted,
+        component: Interpolation,
         restricted: true,
       },
       {

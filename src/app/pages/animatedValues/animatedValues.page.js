@@ -7,6 +7,7 @@ import {
   Highlight,
   Code,
   Section,
+  NextPrevButton,
 } from "../../commons";
 
 export const AnimatedValues = () => {
@@ -40,6 +41,11 @@ export const AnimatedValues = () => {
 
         <Paragraph>Description</Paragraph>
       </Section>
+
+      <NextPrevButton
+        left={{ text: "Getting Started", to: "/docs/getting-started" }}
+        right={{ text: "Interpolation", to: "/docs/interpolation" }}
+      />
     </>
   );
 };

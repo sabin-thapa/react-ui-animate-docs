@@ -66,8 +66,7 @@ export const GettingStarted = () => {
 
         <Paragraph>
           <Code>
-            {`
-// npm
+            {`// npm
 npm install react-uicomp
 
 // yarn
@@ -82,8 +81,7 @@ yarn add react-uicomp
         </Paragraph>
 
         <Code>
-          {`
-import { AnimatedBlock, useAnimatedValue } from "react-ui-animate";
+          {`import { AnimatedBlock, useAnimatedValue } from "react-ui-animate";
 
 export default function () {
   const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
