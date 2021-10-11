@@ -43,7 +43,7 @@ export const GettingStarted = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Minimun requirements</SecondaryTitle>
+        <SecondaryTitle>Minimum requirements</SecondaryTitle>
 
         <Paragraph>
           <ul className="spaced">
