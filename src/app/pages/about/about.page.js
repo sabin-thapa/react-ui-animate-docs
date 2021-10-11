@@ -45,7 +45,13 @@ export const About = () => {
 
         <Paragraph>
           Here are some examples created using{" "}
-          <Highlight>react-ui-animate</Highlight>.
+          <Highlight
+            external
+            link="https://www.npmjs.com/package/react-ui-animate"
+          >
+            react-ui-animate
+          </Highlight>
+          .
         </Paragraph>
 
         <b>1. Animated Search Bar</b>

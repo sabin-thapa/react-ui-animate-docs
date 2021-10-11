@@ -7,6 +7,7 @@ import {
   Highlight,
   Code,
   Section,
+  NextPrevButton,
 } from "../../commons";
 
 export const GettingStarted = () => {
@@ -112,6 +113,11 @@ export default function () {
           In next section we will cover{" "}
           <Highlight link="/docs/animated-values">Animated Values</Highlight>.
         </Paragraph>
+
+        <NextPrevButton
+          left={{ text: "About", to: "/docs/about" }}
+          right={{ text: "Animated Values", to: "/docs/animated-values" }}
+        />
       </Section>
     </>
   );
