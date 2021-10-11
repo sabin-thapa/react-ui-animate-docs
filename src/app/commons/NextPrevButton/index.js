@@ -32,6 +32,8 @@ export const NextPrevButton = ({ left, right }) => {
           )}
         </Box>
 
+        <div style={{ width: 20 }} />
+
         <Box flex={1} flexBox jEnd alCenter>
           {right && (
             <button
