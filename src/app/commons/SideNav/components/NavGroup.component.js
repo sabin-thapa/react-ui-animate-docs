@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ActiveLink } from "react-auth-navigation";
+import { ActiveLink, useAuth } from "react-auth-navigation";
 import {
   useMeasure,
   useAnimatedValue,
@@ -10,6 +10,7 @@ import {
 import { BsFillCaretDownFill } from "react-icons/all";
 
 export const NavGroup = ({ title, navItems }) => {
+  const { setDrawerOpen } = useAuth();
   const [height, setHeight] = useState(0);
   const bind = useMeasure(({ height: h }) => {
     setHeight(h);
@@ -48,7 +49,11 @@ export const NavGroup = ({ title, navItems }) => {
           style={{ paddingBottom: 5 }}
         >
           {navItems.map(({ name, path }, index) => (
-            <li key={index} className="sidenav-nav-group-list-items">
+            <li
+              key={index}
+              onClick={() => setDrawerOpen(false)}
+              className="sidenav-nav-group-list-items"
+            >
               <ActiveLink
                 to={path}
                 className="link-item"

@@ -1,9 +1,11 @@
 import React from "react";
-import { ActiveLink } from "react-auth-navigation";
+import { ActiveLink, useAuth } from "react-auth-navigation";
 
 import { NavGroup } from ".";
 
 export const ParentGroup = ({ title, items }) => {
+  const { setDrawerOpen } = useAuth();
+
   return (
     <div className="sidenav-parent-group">
       <div className="sidenav-parent-group-title">{title}</div>
@@ -18,7 +20,11 @@ export const ParentGroup = ({ title, items }) => {
             const { name, path } = item;
 
             return (
-              <li key={index} className="sidenav-parent-group-list-item">
+              <li
+                key={index}
+                className="sidenav-parent-group-list-item"
+                onClick={() => setDrawerOpen(false)}
+              >
                 <ActiveLink
                   to={path}
                   className="link-item"
