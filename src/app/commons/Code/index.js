@@ -1,19 +1,20 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import Prism from "prismjs";
 
-export const Code = ({ children }) => {
-  useLayoutEffect(() => Prism.highlightAll(), []);
+import { CopyBlock, tomorrow } from "react-code-blocks";
+
+export const Code = ({ children, language = "jsx" }) => {
   return (
-    <pre
-      className="line-numbers"
-      style={{
-        borderRadius: 4,
-        maxHeight: 500,
-      }}
-    >
-      <code className="language-js">{children.trim()}</code>
-    </pre>
+    <div className="demo-code">
+      <CopyBlock
+        language={language}
+        text={children}
+        theme={tomorrow}
+        showLineNumbers={true}
+        wrapLines={true}
+        codeBlock
+      />
+    </div>
   );
 };
 

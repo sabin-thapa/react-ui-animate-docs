@@ -71,7 +71,7 @@ export const About = () => {
 
         <div style={{ margin: "10px 0px" }}>2. Animated Balloon Slider</div>
         <iframe
-          src="https://codesandbox.io/embed/animated-search-bar-using-react-ui-animate-r28rf?fontsize=14&hidenavigation=1&theme=dark"
+          src="https://codesandbox.io/embed/balloon-slider-animation-12c2t?fontsize=14&hidenavigation=1&theme=dark"
           style={{
             width: "100%",
             height: "500px",
@@ -79,7 +79,7 @@ export const About = () => {
             borderRadius: "4px",
             overflow: "hidden",
           }}
-          title="Animated Search Bar using react-ui-animate"
+          title="Balloon Slider Animation"
           allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
           sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
         ></iframe>
