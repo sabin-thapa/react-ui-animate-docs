@@ -10,7 +10,7 @@ import {
   NextPrevButton,
 } from "../../commons";
 
-export const Interpolation = () => {
+export const Animations = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

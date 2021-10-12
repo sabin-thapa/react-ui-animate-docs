@@ -35,5 +35,4 @@ export default withNavigation(App, {
   publicPaths,
   privatePaths,
   userRoles,
-  routerType: "hash",
 });

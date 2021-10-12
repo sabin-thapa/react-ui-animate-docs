@@ -6,7 +6,7 @@ import {
   About,
   GettingStarted,
   AnimatedValues,
-  Interpolation,
+  Animations,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -55,21 +55,9 @@ export const publicPaths = [
         restricted: true,
       },
       {
-        name: "Interpolation",
-        path: "/interpolation",
-        component: Interpolation,
-        restricted: true,
-      },
-      {
-        name: "Animated HOCs",
-        path: "/animated-hocs",
-        component: GettingStarted,
-        restricted: true,
-      },
-      {
-        name: "Configuring Animations",
-        path: "/configuring-animations",
-        component: GettingStarted,
+        name: "Animations",
+        path: "/animations",
+        component: Animations,
         restricted: true,
       },
       {

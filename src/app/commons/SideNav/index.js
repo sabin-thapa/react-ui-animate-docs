@@ -13,12 +13,7 @@ const SideNavComponent = () => {
           { name: "About", path: "/docs/about" },
           { name: "Getting Started", path: "/docs/getting-started" },
           { name: "Animated Values", path: "/docs/animated-values" },
-          { name: "Interpolation", path: "/docs/interpolation" },
-          { name: "Animated HOCs", path: "/docs/animated-hocs" },
-          {
-            name: "Configuring Animations",
-            path: "/docs/configuring-animations",
-          },
+          { name: "Animations", path: "/docs/animations" },
           { name: "Gestures", path: "/docs/gestures" },
         ]}
       />
@@ -27,35 +22,10 @@ const SideNavComponent = () => {
         title="API References"
         items={[
           {
-            name: "Animated Values",
+            name: "Hooks",
             items: [
               { name: "useAnimatedValue()", path: "/docs/use-animated-value" },
               { name: "useMountedValue()", path: "/docs/use-mounted-value" },
-            ],
-          },
-          {
-            name: "Interpolation",
-            items: [
-              { name: "interpolate()", path: "/docs/interpolate" },
-              { name: "bInterpolate()", path: "/docs/binterpolate" },
-            ],
-          },
-          {
-            name: "Animated HOCs",
-            items: [
-              { name: "AnimatedBlock", path: "/docs/animated-block" },
-              { name: "AnimatedInline", path: "/docs/animated-inline" },
-              { name: "AnimatedImage", path: "/docs/animated-image" },
-              { name: "ScrollableBlock", path: "/docs/scrollable-block" },
-              {
-                name: "makeAnimatedComponent()",
-                path: "/docs/make-animated-component",
-              },
-            ],
-          },
-          {
-            name: "Gestures",
-            items: [
               { name: "useOutsideClick()", path: "/docs/use-outside-click" },
               {
                 name: "useWindowDimension()",
@@ -68,8 +38,14 @@ const SideNavComponent = () => {
             ],
           },
           {
-            name: "Miscellaneous",
+            name: "Methods",
             items: [
+              { name: "interpolate()", path: "/docs/interpolate" },
+              { name: "bInterpolate()", path: "/docs/binterpolate" },
+              {
+                name: "makeAnimatedComponent()",
+                path: "/docs/make-animated-component",
+              },
               { name: "clamp()", path: "/docs/clamp" },
               { name: "rubberClamp()", path: "/docs/rubber-clamp" },
               { name: "snapTo()", path: "/docs/snap-to" },
