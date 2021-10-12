@@ -7,6 +7,7 @@ import {
   GettingStarted,
   AnimatedValues,
   Animations,
+  Gestures,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -63,19 +64,19 @@ export const publicPaths = [
       {
         name: "Gestures",
         path: "/gestures",
-        component: GettingStarted,
+        component: Gestures,
         restricted: true,
       },
       // API REFERENCES
       {
-        name: "useAnimatedValue()",
-        path: "/useAnimatedValue",
+        name: "useAnimatedValue",
+        path: "/use-animated-value",
         component: GettingStarted,
         restricted: true,
       },
       {
-        name: "useMountedValue()",
-        path: "/useMountedValue",
+        name: "useMountedValue",
+        path: "/use-mounted-value",
         component: GettingStarted,
         restricted: true,
       },

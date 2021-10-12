@@ -10,7 +10,7 @@ import {
   NextPrevButton,
 } from "../../commons";
 
-export const Animations = () => {
+export const Gestures = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,19 +18,13 @@ export const Animations = () => {
   return (
     <>
       <Section>
-        <Title>Animations</Title>
+        <Title>Gestures</Title>
 
         <Paragraph>Description</Paragraph>
       </Section>
 
       <Section>
         <SecondaryTitle>Sub title</SecondaryTitle>
-
-        <Paragraph>Description</Paragraph>
-      </Section>
-
-      <Section>
-        <SecondaryTitle>bInterpolate()</SecondaryTitle>
 
         <Paragraph>Description</Paragraph>
       </Section>
