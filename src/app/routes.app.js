@@ -8,6 +8,7 @@ import {
   AnimatedValues,
   Animations,
   Gestures,
+  Sample,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -71,13 +72,91 @@ export const publicPaths = [
       {
         name: "useAnimatedValue",
         path: "/use-animated-value",
-        component: GettingStarted,
+        component: Sample,
         restricted: true,
       },
       {
         name: "useMountedValue",
         path: "/use-mounted-value",
-        component: GettingStarted,
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useOutsideClick",
+        path: "/use-outside-click",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useWindowDimension",
+        path: "/use-window-dimension",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useScroll",
+        path: "/use-scroll",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useMouseMove",
+        path: "/use-mouse-move",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useDrag",
+        path: "/use-drag",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "useMeasure",
+        path: "/use-measure",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "interpolate",
+        path: "/interpolate",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "bInterpolate",
+        path: "/binterpolate",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "makeAnimatedComponent",
+        path: "/make-animated-component",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "clamp",
+        path: "/clamp",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "rubberClamp",
+        path: "/rubber-clamp",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "snapTo",
+        path: "/snap-to",
+        component: Sample,
+        restricted: true,
+      },
+      {
+        name: "mix",
+        path: "/mix",
+        component: Sample,
         restricted: true,
       },
     ],
