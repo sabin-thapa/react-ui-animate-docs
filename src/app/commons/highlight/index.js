@@ -6,7 +6,7 @@ export const Highlight = ({ children, link, external }) => {
   const { navigate } = navigation;
 
   return (
-    <div
+    <code
       onClick={() => {
         if (link) {
           if (external) {
@@ -19,6 +19,6 @@ export const Highlight = ({ children, link, external }) => {
       className={link ? "highlight link" : "highlight"}
     >
       {children}
-    </div>
+    </code>
   );
 };
