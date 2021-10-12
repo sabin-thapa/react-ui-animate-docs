@@ -24,20 +24,26 @@ export const Animations = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Sub title</SecondaryTitle>
+        <SecondaryTitle>Animated Value Animated Transition</SecondaryTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>useAnimatedValue</Paragraph>
       </Section>
 
       <Section>
-        <SecondaryTitle>bInterpolate()</SecondaryTitle>
+        <SecondaryTitle>Configuring Animations</SecondaryTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>Spring, Timing, Bezier curve, etc</Paragraph>
+      </Section>
+
+      <Section>
+        <SecondaryTitle>Interpolations</SecondaryTitle>
+
+        <Paragraph>interpolate</Paragraph>
       </Section>
 
       <NextPrevButton
         left={{ text: "Animated Values", to: "/docs/animated-values" }}
-        right={{ text: "Animated HOCs", to: "/docs/animated-hocs" }}
+        right={{ text: "Gestures", to: "/docs/gestures" }}
       />
     </>
   );

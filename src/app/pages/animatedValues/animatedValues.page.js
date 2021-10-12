@@ -28,9 +28,7 @@ export const AnimatedValues = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>
-          Animated transitions with Animated Value
-        </SecondaryTitle>
+        <SecondaryTitle>Defining Animated Value</SecondaryTitle>
 
         <Paragraph>
           <Highlight>useAnimatedValue</Highlight> is a hook that returns an
@@ -235,7 +233,7 @@ function SomeComponent() {
 
       <NextPrevButton
         left={{ text: "Getting Started", to: "/docs/getting-started" }}
-        right={{ text: "Interpolation", to: "/docs/interpolation" }}
+        right={{ text: "Animations", to: "/docs/animations" }}
       />
     </>
   );
