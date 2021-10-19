@@ -5,7 +5,7 @@ import { publicPaths, privatePaths } from "./routes.app";
 import { userRoles, userType } from "./userRoles.app";
 
 // IMPORT COMMONS
-import { Header, SideNav, Label } from "./commons";
+import { Header, SideNav, Label, AlertInfo } from "./commons";
 import { CompWrapper } from "./hocs";
 
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
 
       <CompWrapper>
         <Label>Version: 1.1.x</Label>
+        <AlertInfo />
         <Auth.Screens />
       </CompWrapper>
     </Auth.Provider>
