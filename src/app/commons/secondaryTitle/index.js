@@ -4,6 +4,7 @@ export const SecondaryTitle = ({
   children,
   className,
   isSubHeading,
+  id,
   ...rest
 }) => {
   const cName = ["title", "title--secondary"];
@@ -11,8 +12,8 @@ export const SecondaryTitle = ({
   if (className) cName.push(className);
 
   return (
-    <h2 className={cName.join(" ")} {...rest}>
-      {children}
+    <h2 id={id} className={cName.join(" ")} {...rest}>
+      {children}{" "}
     </h2>
   );
 };
