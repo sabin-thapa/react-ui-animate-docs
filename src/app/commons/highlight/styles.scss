@@ -6,14 +6,15 @@
   padding: 0px 8px;
   margin: 0px 2px;
   font-weight: bold;
-  color: $primary200;
+  color: $black100;
 
   &.link {
     cursor: pointer;
     text-decoration: underline;
+    color: $primary200;
 
-    &:hover {
-      text-decoration: none;
-    }
+    // &:hover {
+    //   text-decoration: none;
+    // }
   }
 }
