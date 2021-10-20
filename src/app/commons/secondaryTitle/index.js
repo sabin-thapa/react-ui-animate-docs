@@ -1,8 +1,17 @@
 import React from "react";
 
-export const SecondaryTitle = ({ children, className, ...rest }) => {
+export const SecondaryTitle = ({
+  children,
+  className,
+  isSubHeading,
+  ...rest
+}) => {
+  const cName = ["title", "title--secondary"];
+  if (isSubHeading) cName.push("subheading");
+  if (className) cName.push(className);
+
   return (
-    <h2 className={`title title--secondary ${className}`} {...rest}>
+    <h2 className={cName.join(" ")} {...rest}>
       {children}
     </h2>
   );

@@ -33,7 +33,9 @@ export const GettingStarted = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Pre-requisites</SecondaryTitle>
+        <SecondaryTitle id="pre-requisites" isSubHeading>
+          Pre-requisites
+        </SecondaryTitle>
 
         <Paragraph>
           If you are familier with Javascript and React, then you'll be able to
@@ -44,7 +46,9 @@ export const GettingStarted = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Minimum requirements</SecondaryTitle>
+        <SecondaryTitle id="min-requirements" isSubHeading>
+          Minimum requirements
+        </SecondaryTitle>
 
         <Paragraph>
           <ul className="spaced">
@@ -61,7 +65,9 @@ export const GettingStarted = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Installation</SecondaryTitle>
+        <SecondaryTitle id="installation" isSubHeading>
+          Installation
+        </SecondaryTitle>
 
         <Paragraph>In you project directory, run:</Paragraph>
 

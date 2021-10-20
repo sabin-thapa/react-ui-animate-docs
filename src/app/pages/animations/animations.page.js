@@ -43,7 +43,7 @@ export const Animations = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle id="transition" className="subheading">
+        <SecondaryTitle id="transition" isSubHeading>
           Animated Value Animated Transition
         </SecondaryTitle>
 
@@ -147,7 +147,7 @@ export default function () {
       </Section>
 
       <Section>
-        <SecondaryTitle id="configure" className="subheading">
+        <SecondaryTitle id="configure" isSubHeading>
           Configuring Animations
         </SecondaryTitle>
 
@@ -253,7 +253,7 @@ export default function () {
       </Section>
 
       <Section>
-        <SecondaryTitle id="interpolation" className="subheading">
+        <SecondaryTitle id="interpolation" isSubHeading>
           Interpolations
         </SecondaryTitle>
 
