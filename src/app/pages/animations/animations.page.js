@@ -15,6 +15,12 @@ export const Animations = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const subHeadings = document.getElementsByClassName("subheading");
+
+    console.log("subHeadings", subHeadings);
+  }, []);
+
   return (
     <>
       <Section>
@@ -42,7 +48,9 @@ export const Animations = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Animated Value Animated Transition</SecondaryTitle>
+        <SecondaryTitle id="transition" className="subheading">
+          Animated Value Animated Transition
+        </SecondaryTitle>
 
         <Paragraph>
           React UI Animate provides one of the easiest way to implement animated
@@ -144,13 +152,17 @@ export default function () {
       </Section>
 
       <Section>
-        <SecondaryTitle>Configuring Animations</SecondaryTitle>
+        <SecondaryTitle id="configure" className="subheading">
+          Configuring Animations
+        </SecondaryTitle>
 
         <Paragraph>Spring, Timing, Bezier curve, etc</Paragraph>
       </Section>
 
       <Section>
-        <SecondaryTitle>Interpolations</SecondaryTitle>
+        <SecondaryTitle id="interpolation" className="subheading">
+          Interpolations
+        </SecondaryTitle>
 
         <Paragraph>interpolate</Paragraph>
       </Section>

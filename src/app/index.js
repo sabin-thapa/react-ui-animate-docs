@@ -23,11 +23,15 @@ const App = () => {
 
       <SideNav />
 
-      <CompWrapper>
-        <Label>Version: 1.1.x</Label>
-        <AlertInfo />
-        <Auth.Screens />
-      </CompWrapper>
+      <div className="pagecontainer">
+        <div className="pagecontainer-content">
+          <Label>Version: 1.1.x</Label>
+          <AlertInfo />
+          <Auth.Screens />
+        </div>
+
+        <div className="pagecontainer-subheadings">haha</div>
+      </div>
     </Auth.Provider>
   );
 };

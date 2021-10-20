@@ -57,3 +57,21 @@ ul.spaced {
     margin-bottom: 4px;
   }
 }
+
+.pagecontainer {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 380px;
+
+  @include responsive-for(md) {
+    margin-left: 20px;
+  }
+
+  &-content {
+    flex: 3;
+  }
+
+  &-subheadings {
+    flex: 1;
+  }
+}
