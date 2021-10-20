@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { AnimatedBlock, interpolate, useAnimatedValue } from "react-ui-animate";
 
 import {
   Title,
@@ -148,7 +149,95 @@ export default function () {
           Configuring Animations
         </SecondaryTitle>
 
-        <Paragraph>Spring, Timing, Bezier curve, etc</Paragraph>
+        <Paragraph>
+          Basically, React UI Animate provides two types of animation
+          configurations: <Highlight>Timing</Highlight> and{" "}
+          <Highlight>Spring</Highlight> based animations. Timing based
+          animations depends upon duration while Spring based animations are
+          naturally balanced and depends upon properties of an object. By
+          default, Animated Values in React UI Animate implements{" "}
+          <Highlight>Spring</Highlight> based animation.{" "}
+          <Highlight>useAnimatedValue</Highlight> hook accepts a second optional
+          argument which is an object different animation configurations. To
+          simply modify the nature of spring animation we can define{" "}
+          <Highlight>animationType</Highlight> property.
+        </Paragraph>
+
+        <Paragraph>
+          <Highlight>animationType</Highlight> property accepts a string of
+          values like ease, elastic, wooble, etc. Default value is "ease".
+        </Paragraph>
+
+        <Code>
+          {`const opacity = useAnimatedValue(0, { animationType: "elastic" });`}
+        </Code>
+
+        <Paragraph>
+          Aditionally, You can also define custom spring configurations by
+          modifying properties: <Highlight>mass</Highlight>,
+          <Highlight>friction</Highlight> and <Highlight>tension</Highlight>
+        </Paragraph>
+
+        <Code>
+          {`const opacity = useAnimatedValue(0, { mass: 1, friction: 10, tension: 200 });`}
+        </Code>
+
+        <Paragraph>
+          In the above example, we defined <Highlight>Spring</Highlight> based
+          animations which is naturally balanced. But, In some cases,{" "}
+          <Highlight>Timing</Highlight> based animation is needed. The Timing
+          based animations are fully dependent upon durations. We have to define
+          the amount of duration when the animation is finished. The
+          configuration object accepts a <Highlight>duration</Highlight>{" "}
+          property where the value is the number of milliseconds the animation
+          should be completed.
+        </Paragraph>
+
+        <Code>
+          {`const opacity = useAnimatedValue(0, { duration: 1000 });`}
+        </Code>
+
+        <Paragraph>
+          In the above example, <Highlight>duration</Highlight> is set to 1000
+          milliseconds i.e. 1 second. When animation value is updated it will
+          complete the animation to in exactly 1 second. These animations are
+          not naturally balanced like Spring based animations because it is
+          linearly interpolated. Linear animations are boring and is not
+          possible in real life. We can define some easing functions to modify
+          the nature of Time based animations. To do so, we should define{" "}
+          <Highlight>easing</Highlight> property.
+        </Paragraph>
+
+        <Code>
+          {`const opacity = useAnimatedValue(0, { duration: 1000, easing: Easing.inOut(Easing.ease) });`}
+        </Code>
+
+        <Paragraph>
+          In the above example, <Highlight>duration</Highlight> is set to 1000
+          milliseconds and <Highlight>easing</Highlight> is set to
+          Easing.inOut(Easing.ease) which defines an object moves slowly
+          accelerating to speed and slowly coming to rest. You can find a
+          visualization of some common easing functions at{" "}
+          <Highlight link="http://easings.net/" external>
+            http://easings.net/
+          </Highlight>
+          . Bezier curves also can be implemented.
+        </Paragraph>
+
+        <Code>
+          {`const opacity = useAnimatedValue(0, { duration: 1000, easing: Easing.bezier(.17,.67,.83,.67) });`}
+        </Code>
+
+        <Paragraph>
+          <Highlight>Easing</Highlight> module also has a{" "}
+          <Highlight>bezier</Highlight> function which provides a cubic bezier
+          curve, equivalent to CSS Transitions'{" "}
+          <Highlight>transition-timing-function</Highlight>. A useful tool to
+          visualize cubic bezier curves can be found at{" "}
+          <Highlight link="http://cubic-bezier.com/" external>
+            http://cubic-bezier.com/
+          </Highlight>
+        </Paragraph>
       </Section>
 
       <Section>
@@ -156,7 +245,49 @@ export default function () {
           Interpolations
         </SecondaryTitle>
 
-        <Paragraph>interpolate</Paragraph>
+        <Paragraph>
+          Each property can be run through an interpolation first. An
+          interpolation maps input ranges to output ranges, typically using a
+          linear interpolation but also supports easing functions. By default,
+          it will extrapolate the curve beyond the ranges given, but you can
+          also have it clamp the output value.{" "}
+          <Highlight>interpolate</Highlight> function allows the Animated Value
+          to map from input ranges to output ranges.
+        </Paragraph>
+
+        <Paragraph>
+          A basic mapping to convert a 0-1 range to a 0-100 range would be:
+        </Paragraph>
+
+        <Code>{`interpolate(value, [0, 1], [0, 100]);`}</Code>
+
+        <Paragraph>
+          For example, we want to move an element from left 0px to 500px when
+          the opacity changes from 0 to 1.
+        </Paragraph>
+
+        <Code>{`import { useAnimatedValue, AnimatedBlock, interpolate } from "react-ui-animate";
+
+export default function() {
+  const opacity = useAnimatedValue(0);
+
+  return (
+    <>
+      <AnimatedBlock
+        style={{
+          width: 100,
+          height: 100,
+          opacity: opacity.value,
+          backgroundColor: "red",
+          position: "absolute",
+          left: interpolate(opacity.value, [0, 1], [0, 500]),
+        }}
+      />
+
+      <button onClick={() => (opacity.value = 1)}>Animate Me</button>
+    </>
+  );
+}`}</Code>
       </Section>
 
       <NextPrevButton

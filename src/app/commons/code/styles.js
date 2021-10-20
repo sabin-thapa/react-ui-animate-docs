@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
 export const Pre = styled.pre`
   text-align: left;
   margin: 1em 0;
-  padding: 0.5em;
+  padding: 1.2em;
   overflow: auto;
   border-radius: 4px;
 
   & .token-line {
-    line-height: 1.3em;
-    height: 1.3em;
+    line-height: 1.6em;
+    height: 1.6em;
   }
 `;
 
@@ -25,7 +25,7 @@ export const Line = styled.div`
 export const LineNo = styled.span`
   display: table-cell;
   text-align: right;
-  padding-right: 1em;
+  padding-right: 1.2em;
   user-select: none;
   opacity: 0.5;
 `;
