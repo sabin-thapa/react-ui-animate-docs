@@ -45,6 +45,12 @@ export const withSubHeading = (Component) => {
         document.getElementsByClassName("subheading")
       );
 
+      const anchors = Array.from(
+        document.getElementsByClassName("subheadings-list-item")
+      );
+
+      anchors.forEach((a) => a.classList.remove("active"));
+
       subHeadings.forEach((subHeading) => {
         const id = subHeading.getAttribute("id");
         subLinks.push({

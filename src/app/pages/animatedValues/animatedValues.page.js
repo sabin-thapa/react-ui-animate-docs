@@ -8,9 +8,10 @@ import {
   Code,
   Section,
   NextPrevButton,
+  withSubHeading,
 } from "../../commons";
 
-export const AnimatedValues = () => {
+export const AnimatedValues = withSubHeading(() => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,7 +29,9 @@ export const AnimatedValues = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Defining Animated Value</SecondaryTitle>
+        <SecondaryTitle id="defining-aimated-value" isSubHeading>
+          Defining Animated Value
+        </SecondaryTitle>
 
         <Paragraph>
           <Highlight>useAnimatedValue</Highlight> is a hook that returns an
@@ -130,7 +133,9 @@ export default function () {
       </Section>
 
       <Section>
-        <SecondaryTitle>Mounting and Unmounting Components</SecondaryTitle>
+        <SecondaryTitle id="mounting-and-unmounting" isSubHeading>
+          Mounting and Unmounting Components
+        </SecondaryTitle>
         <Paragraph>
           Second most important aspect of Animated Value is that they provide a
           way to handle mounting and unmounting of any component. Generally, we
@@ -237,4 +242,4 @@ function SomeComponent() {
       />
     </>
   );
-};
+});

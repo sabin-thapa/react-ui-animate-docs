@@ -6,13 +6,13 @@ import {
   Paragraph,
   Highlight,
   Section,
-  Box,
   NextPrevButton,
+  withSubHeading,
 } from "../../commons";
 
 import { AnimatedSearch, BalloonSlider, HamburderMenu } from "../../examples";
 
-export const About = () => {
+export const About = withSubHeading(() => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,7 +29,9 @@ export const About = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Motivation &amp; Library overview</SecondaryTitle>
+        <SecondaryTitle id="motivation" isSubHeading>
+          Motivation and Library overview
+        </SecondaryTitle>
 
         <Paragraph>
           In todays world, interactive and smooth web applications are preferred
@@ -54,7 +56,9 @@ export const About = () => {
       </Section>
 
       <Section>
-        <SecondaryTitle>Examples</SecondaryTitle>
+        <SecondaryTitle id="examples" isSubHeading>
+          Examples
+        </SecondaryTitle>
 
         <Paragraph>
           Here are some examples created using{" "}
@@ -144,4 +148,4 @@ export const About = () => {
       </Section>
     </>
   );
-};
+});
