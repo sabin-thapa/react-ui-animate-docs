@@ -1,19 +1,19 @@
 .highlight {
   background: darken($grey300, 2%);
-  color: $black100;
   border: 1px solid darken($grey300, 10%);
   border-radius: 4px;
   display: inline-block;
   padding: 0px 8px;
   margin: 0px 2px;
   font-weight: bold;
+  color: $primary200;
 
   &.link {
-    color: $primary200;
     cursor: pointer;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }

@@ -70,7 +70,7 @@ ul.spaced {
   display: flex;
   margin-top: 100px;
   margin-left: 320px;
-  margin-right: 300px;
+  margin-right: 20%;
 
   @include responsive-for(xlg) {
     margin-right: 20px;
@@ -88,7 +88,7 @@ ul.spaced {
     position: fixed;
     right: 0;
     top: 120px;
-    width: 300px;
+    width: 20%;
     padding: 0px 20px;
 
     @include responsive-for(xlg) {

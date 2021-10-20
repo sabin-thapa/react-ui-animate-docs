@@ -288,6 +288,43 @@ export default function() {
     </>
   );
 }`}</Code>
+
+        <Paragraph>
+          <Highlight>interpolate</Highlight> accepts an animated value as its
+          first argument, array of numbers as its second argument namely input
+          range and array of numbers with same length as second argument namely
+          output range. It also supports multiple range segments as well, which
+          is very much useful for different scenarios like dead zones and other
+          handly tricks.
+        </Paragraph>
+
+        <Code>{`interpolate(value, [-300, -100, 0, 100, 101], [300, 0, 1, 0, 0]);`}</Code>
+
+        <Paragraph>
+          <Highlight>interpolate</Highlight> also supports mapping to strings,
+          allowing you to animate colors as well as values with units. For
+          example, if you wanted to change backgroundColor from red to black
+          when value changes from 0 to 1, you could do:
+        </Paragraph>
+
+        <Code>{`interpolate(value, [0, 1], ["red", "black"]);`}</Code>
+
+        <Paragraph>
+          The default behavior of <Highlight>interpolate</Highlight> is that it
+          will extrapolate the curve beyond the ranges given. You can clamp the
+          value output value by passing extrapolation configuration object as
+          4th argument of <Highlight>interpolate</Highlight> function. You can
+          set the extrapolation by setting the{" "}
+          <Highlight>extrapolate</Highlight>,{" "}
+          <Highlight>extrapolateLeft</Highlight>, or
+          <Highlight>extrapolateRight</Highlight> options. The default value is
+          "extend" but you can use "clamp" to prevent the output value from
+          exceeding outputRange.
+        </Paragraph>
+
+        <Code>{`interpolate(value, [-300, -100, 0, 100, 101], [300, 0, 1, 0, 0], {
+  extrapolate: "clamp"
+});`}</Code>
       </Section>
 
       <NextPrevButton
