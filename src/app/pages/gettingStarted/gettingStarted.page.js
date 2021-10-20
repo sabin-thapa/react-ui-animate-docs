@@ -126,8 +126,7 @@ export default function () {
       <button onClick={() => (opacity.value = 1)}>Animate Me</button>
     </div>
   );
-}
-`}
+}`}
         </Code>
         <Paragraph>
           In next section we will cover{" "}

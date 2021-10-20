@@ -52,10 +52,7 @@ export const AnimatedValues = withSubHeading(() => {
           <Highlight>useAnimatedValue</Highlight> hook:
         </Paragraph>
 
-        <Code>
-          {`const animationNode = useAnimatedValue(initialValue);
-`}
-        </Code>
+        <Code>{`const animationNode = useAnimatedValue(initialValue);`}</Code>
 
         <Paragraph>
           It returns a mutable object whose <Highlight>.value</Highlight>{" "}
@@ -83,8 +80,7 @@ function SomeComponent() {
       Randomize
     </button>
   )
-}
-`}
+}`}
         </Code>
 
         <Paragraph>
@@ -117,8 +113,7 @@ export default function () {
       <button onClick={() => (opacity.value = 1)}>Animate Me</button>
     </div>
   );
-}
-`}
+}`}
         </Code>
 
         <Paragraph>
@@ -149,8 +144,7 @@ export default function () {
           hook:
         </Paragraph>
         <Code>
-          {`const mountedFunction = useMountedValue(boolean, [from, enter, exit]);
-`}
+          {`const mountedFunction = useMountedValue(boolean, [from, enter, exit]);`}
         </Code>
         <Paragraph>
           <Highlight>useMountedValue</Highlight> returns a function when a state
@@ -180,8 +174,7 @@ function SomeComponent() {
       </button>
     </div>
   );
-}
-`}
+}`}
         </Code>
         <Paragraph>
           In the above example, by default the state is{" "}
@@ -221,8 +214,7 @@ function SomeComponent() {
       </button>
     </div>
   );
-}
-`}
+}`}
         </Code>
         <Paragraph>
           In the above example, <Highlight>open</Highlight> function receives a
