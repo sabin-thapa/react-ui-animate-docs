@@ -9,6 +9,7 @@ import {
   Section,
   NextPrevButton,
   withSubHeading,
+  Tab,
 } from "../../commons";
 
 export const GettingStarted = withSubHeading(() => {
@@ -72,14 +73,28 @@ export const GettingStarted = withSubHeading(() => {
         <Paragraph>In you project directory, run:</Paragraph>
 
         <Paragraph>
-          <Code language="bash">
-            {`// npm
-npm install react-ui-animate
-
-// yarn
-yarn add react-ui-animate
-`}
-          </Code>
+          <Tab
+            panes={[
+              {
+                title: "npm",
+                render: () => (
+                  <Code language="bash">
+                    {`# npm
+npm install react-ui-animate`}
+                  </Code>
+                ),
+              },
+              {
+                title: "yarn",
+                render: () => (
+                  <Code language="bash">
+                    {`# yarn
+yarn add react-ui-animate`}
+                  </Code>
+                ),
+              },
+            ]}
+          />
         </Paragraph>
         <Paragraph>
           After installation you are ready to implement your own gestures and

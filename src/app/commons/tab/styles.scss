@@ -1,0 +1,30 @@
+// TAB STYLES
+.tab {
+  &-title {
+    display: flex;
+    border-bottom: 1px solid $grey200;
+
+    .tab-item {
+      padding: 8px 15px 4px 15px;
+      margin-right: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: $grey100;
+
+      &:first-child {
+        margin-left: 10px;
+      }
+
+      &:last-child {
+        margin-right: 10px;
+      }
+
+      &.active {
+        border-bottom: 3px solid $primary200;
+        color: $black;
+      }
+    }
+  }
+
+  //   &-content {}
+}
