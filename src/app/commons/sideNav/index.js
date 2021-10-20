@@ -73,11 +73,7 @@ export const SideNav = () => {
           mounted && (
             <AnimatedBlock
               style={{
-                transform: interpolate(
-                  animation.value,
-                  [0, 1],
-                  ["translateX(-340px)", "translateX(0px)"]
-                ),
+                translateX: interpolate(animation.value, [0, 1], [-340, 0]),
               }}
               className="sidenav-mobile"
             >

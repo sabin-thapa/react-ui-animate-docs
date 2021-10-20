@@ -29,7 +29,7 @@
       background-color: $grey300;
     }
 
-    @media all and (max-width: 768px) {
+    @include responsive-for(lg) {
       display: flex;
     }
   }

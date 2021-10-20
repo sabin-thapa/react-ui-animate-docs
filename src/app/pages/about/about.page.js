@@ -71,14 +71,7 @@ export const About = withSubHeading(() => {
           .
         </Paragraph>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            rowGap: "20px",
-            columnGap: "20px",
-          }}
-        >
+        <div className="example-grid">
           <div
             style={{
               backgroundColor: "#f1f1f1",
