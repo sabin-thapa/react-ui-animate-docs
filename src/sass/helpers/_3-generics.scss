@@ -69,8 +69,8 @@ ul.spaced {
 .pagecontainer {
   display: flex;
   margin-top: 100px;
-  margin-left: 320px;
-  margin-right: 20%;
+  margin-left: 380px;
+  margin-right: 21%;
 
   @include responsive-for(xlg) {
     margin-right: 20px;
