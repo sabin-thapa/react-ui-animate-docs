@@ -14,6 +14,14 @@
   }
 }
 
+.demo-code {
+  font-family: monospace;
+  background-color: $grey300;
+  padding: 2px;
+  border-radius: 6px;
+  // min-width: 500px;
+}
+
 // TABLE
 .table {
   border-collapse: collapse;
@@ -62,17 +70,18 @@ ul.spaced {
   display: flex;
   margin-top: 100px;
   margin-left: 320px;
+  margin-right: 300px;
+
+  @include responsive-for(xlg) {
+    margin-right: 20px;
+  }
 
   @include responsive-for(lg) {
     margin-left: 20px;
   }
 
   &-content {
-    margin-right: 300px;
-
-    @include responsive-for(xlg) {
-      margin-right: 20px;
-    }
+    width: 100%;
   }
 
   &-subheadings {

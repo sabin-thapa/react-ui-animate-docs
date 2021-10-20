@@ -1,5 +1,13 @@
 .nextprev {
   margin: 40px 0px 60px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  @include responsive-for(lg) {
+    grid-template-columns: 1fr;
+  }
 
   &-button {
     padding: 16px 30px;
