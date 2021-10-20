@@ -13,6 +13,7 @@ export const SubHeadings = () => {
     <div className="subheadings">
       <ul className="subheadings-list">
         {list.map((subheading, index) => {
+          console.log(subheading);
           return (
             <li
               key={index}
@@ -22,7 +23,13 @@ export const SubHeadings = () => {
                   : "subheadings-list-item"
               }
             >
-              <a href={`${location.pathname}#${subheading.id}`}>
+              <a
+                href={`/#${location.pathname}#${subheading.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, subheading.element.offsetTop - 100);
+                }}
+              >
                 {subheading.name}
               </a>
             </li>
@@ -57,6 +64,7 @@ export const withSubHeading = (Component) => {
           id,
           name: subHeading.innerHTML,
           active: location.hash === "#" + id,
+          element: subHeading,
         });
       });
 
