@@ -5,8 +5,7 @@ import { publicPaths, privatePaths } from "./routes.app";
 import { userRoles, userType } from "./userRoles.app";
 
 // IMPORT COMMONS
-import { Header, SideNav, Label, AlertInfo } from "./commons";
-import { CompWrapper } from "./hocs";
+import { Header, SideNav, Label, AlertInfo, SubHeadings } from "./commons";
 
 const App = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -30,7 +29,9 @@ const App = () => {
           <Auth.Screens />
         </div>
 
-        <div className="pagecontainer-subheadings">haha</div>
+        <div className="pagecontainer-subheadings">
+          <SubHeadings />
+        </div>
       </div>
     </Auth.Provider>
   );

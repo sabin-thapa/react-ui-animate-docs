@@ -10,3 +10,4 @@ export * from "./section";
 export * from "./box";
 export * from "./nextPrevButton";
 export * from "./alertInfo";
+export * from "./subHeadings";

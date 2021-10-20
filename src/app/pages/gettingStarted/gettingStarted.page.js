@@ -8,9 +8,10 @@ import {
   Code,
   Section,
   NextPrevButton,
+  withSubHeading,
 } from "../../commons";
 
-export const GettingStarted = () => {
+export const GettingStarted = withSubHeading(() => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -119,4 +120,4 @@ export default function () {
       </Section>
     </>
   );
-};
+});

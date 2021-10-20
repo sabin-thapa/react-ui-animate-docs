@@ -1,0 +1,40 @@
+.subheadings {
+  border-left: 2px solid $grey200;
+  padding-left: 10px;
+
+  &-list {
+    list-style: none;
+
+    &-item {
+      a {
+        text-decoration: none;
+        color: $black200;
+        display: inline-block;
+        padding: 6px;
+        border-radius: 4px;
+        margin-bottom: 2px;
+        position: relative;
+
+        &:hover {
+          background-color: $grey300;
+        }
+      }
+
+      &.active {
+        a {
+          color: $primary200;
+
+          &::after {
+            position: absolute;
+            content: "";
+            left: -14px;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background: $primary200;
+          }
+        }
+      }
+    }
+  }
+}

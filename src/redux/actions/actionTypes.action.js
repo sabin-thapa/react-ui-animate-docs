@@ -22,3 +22,6 @@ export const UPDATE_VIEWER = createActionSet("UPDATE_VIEWER");
 
 export const USER_WORKER_LIST = createActionSet("USER_WORKER_LIST");
 export const USER_DETAIL = createActionSet("USER_DETAIL");
+
+export const SET_SUBHEADING_LINKS = createActionSet("SET_SUBHEADING_LINKS");
+export const GET_SUBHEADING_LINKS = createActionSet("GET_SUBHEADING_LINKS");

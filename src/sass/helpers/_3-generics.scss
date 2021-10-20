@@ -68,10 +68,12 @@ ul.spaced {
   }
 
   &-content {
-    flex: 3;
+    margin-right: 400px;
   }
 
   &-subheadings {
-    flex: 1;
+    position: fixed;
+    right: 50px;
+    top: 100px;
   }
 }
