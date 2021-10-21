@@ -1,10 +1,15 @@
 import { useDrag, useAnimatedValue, AnimatedBlock } from "react-ui-animate";
 
 export const Draggable = () => {
-  const left = useAnimatedValue(0);
+  const left = useAnimatedValue(0, { animationType: "elastic" });
+  const top = useAnimatedValue(0, { animationType: "elastic" });
 
-  const bind = useDrag(({ down, movementX }) => {
+  const bind = useDrag(({ down, movementX, movementY }) => {
     left.value = down ? movementX : 0;
+    top.value = down ? movementY : 0;
+
+    left.immediate = down;
+    top.immediate = down;
   });
 
   return (
@@ -26,6 +31,7 @@ export const Draggable = () => {
           height: 80,
           backgroundColor: "#3399ff",
           x: left.value,
+          y: top.value,
           borderRadius: 4,
           display: "flex",
           justifyContent: "center",
@@ -33,6 +39,8 @@ export const Draggable = () => {
           color: "white",
           userSelect: "none",
           cursor: "grabbing",
+          position: "absolute",
+          zIndex: 1,
         }}
       >
         DRAG ME

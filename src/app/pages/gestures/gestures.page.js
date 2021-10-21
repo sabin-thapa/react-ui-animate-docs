@@ -63,6 +63,8 @@ export const Gestures = withSubHeading(() => {
           Binding a gesture to a Node
         </SecondaryTitle>
 
+        <Draggable />
+
         <Paragraph>
           Due to similar pattern of gesture hooks, it becomes quite easy to
           implement any gesture effortlessly. To bind a gesture to a node, the
@@ -104,8 +106,6 @@ export default function() {
           To actually implement dragging of an element, we should be using it
           with Animated Value.
         </Paragraph>
-
-        <Draggable />
 
         <Code>{`import { useDrag, useAnimatedValue, AnimatedBlock } from "react-ui-animate";
 
