@@ -10,6 +10,7 @@ import {
   NextPrevButton,
   withSubHeading,
 } from "../../commons";
+import { Draggable } from "../../examples";
 
 export const Gestures = withSubHeading(() => {
   useEffect(() => {
@@ -74,7 +75,7 @@ export const Gestures = withSubHeading(() => {
 
 export default function() {
 
-  const bind = useDrag((event) => doSomething(event));
+  const bind = useDrag((state) => doSomething(state));
 
   return (
     <div
@@ -92,7 +93,49 @@ export default function() {
           In the above example, a <Highlight>{"<div />"}</Highlight> receives an
           object with event handlers when you spread{" "}
           <Highlight>{`...bind()`}</Highlight>, you're actually adding
-          onPointerDown, onMouseDown, and other event handlers.
+          onPointerDown, onMouseDown, and other event handlers. The{" "}
+          <Highlight>useDrag</Highlight> hook accepts a callback function with
+          state as a parameter. <Highlight>state</Highlight> is an object
+          containing all attributes of the gesture. The state is passed to your
+          handler every time the gesture updates.
+        </Paragraph>
+
+        <Paragraph>
+          To actually implement dragging of an element, we should be using it
+          with Animated Value.
+        </Paragraph>
+
+        <Draggable />
+
+        <Code>{`import { useDrag, useAnimatedValue, AnimatedBlock } from "react-ui-animate";
+
+export default function() {
+  const left = useAnimatedValue(0);
+
+  const bind = useDrag(({ down, movementX }) => {
+    left.value = down ? movementX : 0;
+  });
+
+  return (
+    <AnimatedBlock
+      {...bind()}
+      style={{
+        width: 60,
+        height: 60,
+        backgroundColor: "#3399ff",
+        position: "absolute",
+        left: left.value,
+      }}
+    />
+  );
+}`}</Code>
+
+        <Paragraph>
+          In the above example, <Highlight>left</Highlight> is an animated
+          value. The <Highlight>state</Highlight> object has{" "}
+          <Highlight>down</Highlight> which represents the current state of a
+          mouse click and <Highlight>movementX</Highlight> which represents the
+          movement in x-axis always starting from 0.
         </Paragraph>
       </Section>
 
