@@ -65,7 +65,7 @@ export const publicPaths = [
       {
         name: "Gestures",
         path: "/gestures",
-        component: Sample,
+        component: Gestures,
         restricted: true,
       },
       // API REFERENCES

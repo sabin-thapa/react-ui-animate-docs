@@ -94,7 +94,7 @@ export default function () {
 
         <Paragraph>
           In React UI Animate, such Animated Value can accept primitives like
-          number, boolean, string or Animated Value ifself. When we initialize a{" "}
+          number, boolean, string or Animated Value itself. When we initialize a{" "}
           <Highlight>useAnimatedValue</Highlight>, with any primitives, it must
           be updated / assigned with same primitive type. You also can initiate
           the useAnimatedValue with conditional operation. For example:
