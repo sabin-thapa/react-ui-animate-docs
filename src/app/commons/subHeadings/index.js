@@ -13,7 +13,6 @@ export const SubHeadings = () => {
     <div className="subheadings">
       <ul className="subheadings-list">
         {list.map((subheading, index) => {
-          console.log(subheading);
           return (
             <li
               key={index}
