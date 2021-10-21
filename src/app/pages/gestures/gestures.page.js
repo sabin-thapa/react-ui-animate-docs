@@ -140,8 +140,8 @@ export default function() {
       </Section>
 
       <NextPrevButton
-        left={{ text: "Animated Values", to: "/docs/animated-values" }}
-        right={{ text: "Animated HOCs", to: "/docs/animated-hocs" }}
+        left={{ text: "Animations", to: "/docs/animations" }}
+        right={{ text: "useAnimatedValue", to: "/docs/use-animated-value" }}
       />
     </>
   );
