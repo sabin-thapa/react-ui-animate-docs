@@ -24,3 +24,25 @@
     // }
   }
 }
+
+.subtitle {
+  background: darken($grey300, 2%);
+  border: 1px solid darken($grey300, 10%);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 14px;
+  color: $primary200;
+  margin-top: 14px;
+
+  &-type {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+    color: $primary200;
+  }
+}

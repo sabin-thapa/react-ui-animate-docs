@@ -9,6 +9,7 @@ import {
   Animations,
   Gestures,
   Sample,
+  UseAnimatedValue,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -72,7 +73,7 @@ export const publicPaths = [
       {
         name: "useAnimatedValue",
         path: "/use-animated-value",
-        component: Sample,
+        component: UseAnimatedValue,
         restricted: true,
       },
       {
