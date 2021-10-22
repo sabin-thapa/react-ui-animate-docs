@@ -96,3 +96,49 @@ ul.spaced {
     }
   }
 }
+
+// TABLE
+.table {
+  border-collapse: collapse;
+  border: 1px solid $grey200;
+  max-width: 800px;
+  // width: 100%;
+
+  tr {
+    border-bottom: 1px solid $grey200;
+
+    %table-padding {
+      padding: 15px;
+      color: $black100;
+      border-right: 1px solid $grey200;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    th {
+      text-align: center;
+      color: darken($black200, 20%);
+      @extend %table-padding;
+    }
+
+    td {
+      @extend %table-padding;
+    }
+
+    &:first-child {
+      border-bottom: 2px solid $grey200;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: $grey300;
+  }
+
+  thead {
+    tr {
+      background: darken($grey300, 2%);
+    }
+  }
+}

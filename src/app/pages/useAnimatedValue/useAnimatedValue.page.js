@@ -35,6 +35,13 @@ export const UseAnimatedValue = withSubHeading(() => {
           component is unmounted, does not lose data on other state changes and
           data modification is done without re-render.
         </Paragraph>
+
+        <Paragraph>
+          It returns a mutable object whose <Highlight>.value</Highlight>{" "}
+          property is initialized to the passed argument{" "}
+          <Highlight>initialValue</Highlight>. This can be any primitive like
+          number, boolean, string or Animation Values it self.
+        </Paragraph>
       </Section>
 
       <Section>
@@ -42,11 +49,114 @@ export const UseAnimatedValue = withSubHeading(() => {
           Arguments
         </SecondaryTitle>
 
+        <br />
+
         <SubTitle type="[number|boolean|string|AnimatedValue]">
           initialValue
         </SubTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>
+          The first argument takes the initial value, which could be any of
+          these primitivs: number, boolean, string or AnimatedValue. The value
+          then can be read and updated from the Animated Value reference using{" "}
+          <Highlight>.value</Highlight> attribute.
+        </Paragraph>
+
+        <SubTitle type="[object]">config?</SubTitle>
+
+        <Paragraph>
+          Object containing the animation configuration. Allowed parameters are
+          listed below:
+        </Paragraph>
+
+        {/* duration?: number;
+  velocity?: number;
+  mass?: number;
+  friction?: number;
+  tension?: number;
+  easing?: (t: number) => number;
+  delay?: number;
+  decay?: number | boolean; 
+  animationType?: InitialConfigType;
+  onAnimationEnd?: (value: any) => void;
+  listener?: (value: number) => void;
+  immediate?: boolean;
+  */}
+
+        <table className="table">
+          <tr>
+            <th>Options</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>animationType</td>
+            <td>"ease"</td>
+            <td>Default spring type animation</td>
+          </tr>
+
+          <tr>
+            <td>mass</td>
+            <td>1</td>
+            <td>Spring mass</td>
+          </tr>
+          <tr>
+            <td>friction</td>
+            <td>26</td>
+            <td>Spring friction</td>
+          </tr>
+          <tr>
+            <td>tension</td>
+            <td>170</td>
+            <td>Spring energy</td>
+          </tr>
+          <tr>
+            <td>immediate</td>
+            <td>false</td>
+            <td>
+              If <Highlight>true</Highlight>, the animation is not applied
+              rather updates are immediate.
+            </td>
+          </tr>
+          <tr>
+            <td>duration</td>
+            <td>undefined</td>
+            <td>
+              How long the animation should last, if {`> than`} 0 switch to a
+              duration-based animation instead of spring physics
+            </td>
+          </tr>
+          <tr>
+            <td>easing</td>
+            <td>{`t => t`}</td>
+            <td>Linear by default, you can use Easing module.</td>
+          </tr>
+          <tr>
+            <td>delay</td>
+            <td>0</td>
+            <td>Number of milliseconds after which the animation is started</td>
+          </tr>
+          <tr>
+            <td>velocity</td>
+            <td>0</td>
+            <td>Initial velocity</td>
+          </tr>
+          <tr>
+            <td>decay</td>
+            <td>false</td>
+            <td>Should apply decay animation.</td>
+          </tr>
+          <tr>
+            <td>onAnimationEnd</td>
+            <td>undefined</td>
+            <td>Function called after animation is completed.</td>
+          </tr>
+          <tr>
+            <td>listener</td>
+            <td>undefined</td>
+            <td>Function called every time the value is updated.</td>
+          </tr>
+        </table>
       </Section>
 
       <Section>
@@ -54,7 +164,24 @@ export const UseAnimatedValue = withSubHeading(() => {
           Returns
         </SecondaryTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>
+          Returns a reference to the Animated Value with the provided data. The
+          value can be updated and read by HOCs using{" "}
+          <Highlight>.value</Highlight> attribute. To read current value for
+          conditional operations, we use <Highlight>.currentValue</Highlight>.
+          We can update <Highlight>immediate</Highlight> by assigning boolean
+          value to it.
+        </Paragraph>
+
+        <Code>{`opacity.immediate = true`}</Code>
+
+        <Paragraph>
+          To apply decay animation, we use <Highlight>decay</Highlight> which
+          accepts an object with <Highlight>value: boolean</Highlight> and{" "}
+          <Highlight>velocity: number</Highlight> properties.
+        </Paragraph>
+
+        <Code>{`opacity.decay = { value: true, velocity: 0.998 }`}</Code>
       </Section>
 
       <Section>
@@ -62,7 +189,12 @@ export const UseAnimatedValue = withSubHeading(() => {
           Example
         </SecondaryTitle>
 
-        <Paragraph>Description</Paragraph>
+        <Paragraph>
+          In the below example, we render a <Highlight>AnimatedBlock</Highlight>{" "}
+          and a button. We initialize an Animated Value{" "}
+          <Highlight>opacity</Highlight> and applied in AnimatedBlock and
+          triggering the update with a button.
+        </Paragraph>
 
         <Code>
           {`import { AnimatedBlock, useAnimatedValue } from "react-ui-animate";
