@@ -6,3 +6,4 @@ export * from "./animations";
 export * from "./gestures";
 export * from "./sample";
 export * from "./useAnimatedValue";
+export * from "./useMountedValue";

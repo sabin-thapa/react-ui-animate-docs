@@ -10,6 +10,7 @@ import {
   Gestures,
   Sample,
   UseAnimatedValue,
+  UseMountedValue,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -79,7 +80,7 @@ export const publicPaths = [
       {
         name: "useMountedValue",
         path: "/use-mounted-value",
-        component: Sample,
+        component: UseMountedValue,
         restricted: true,
       },
       {
