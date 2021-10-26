@@ -31,10 +31,10 @@ const SideNavComponent = () => {
                 name: "useWindowDimension",
                 path: "/docs/use-window-dimension",
               },
+              { name: "useMeasure", path: "/docs/use-measure" },
               { name: "useScroll", path: "/docs/use-scroll" },
               { name: "useMouseMove", path: "/docs/use-mouse-move" },
               { name: "useDrag", path: "/docs/use-drag" },
-              { name: "useMeasure", path: "/docs/use-measure" },
             ],
           },
           {

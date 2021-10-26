@@ -99,6 +99,12 @@ export const publicPaths = [
         restricted: true,
       },
       {
+        name: "useMeasure",
+        path: "/use-measure",
+        component: Sample,
+        restricted: true,
+      },
+      {
         name: "useScroll",
         path: "/use-scroll",
         component: Sample,
@@ -113,12 +119,6 @@ export const publicPaths = [
       {
         name: "useDrag",
         path: "/use-drag",
-        component: Sample,
-        restricted: true,
-      },
-      {
-        name: "useMeasure",
-        path: "/use-measure",
         component: Sample,
         restricted: true,
       },
