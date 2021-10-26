@@ -12,6 +12,7 @@ import {
   UseAnimatedValue,
   UseMountedValue,
   UseOutsideClick,
+  UseWindowDimension,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -93,7 +94,7 @@ export const publicPaths = [
       {
         name: "useWindowDimension",
         path: "/use-window-dimension",
-        component: Sample,
+        component: UseWindowDimension,
         restricted: true,
       },
       {

@@ -8,3 +8,4 @@ export * from "./sample";
 export * from "./useAnimatedValue";
 export * from "./useMountedValue";
 export * from "./useOutsideClick";
+export * from "./useWindowDimension";
