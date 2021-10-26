@@ -142,8 +142,7 @@ export const UseMeasure = withSubHeading(() => {
         </Paragraph>
 
         <Code>
-          {`
-import { useMeasure } from "react-ui-animate";
+          {`import { useMeasure } from "react-ui-animate";
 
 export default function() {
 
