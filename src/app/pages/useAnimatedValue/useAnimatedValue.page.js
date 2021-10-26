@@ -69,20 +69,6 @@ export const UseAnimatedValue = withSubHeading(() => {
           listed below:
         </Paragraph>
 
-        {/* duration?: number;
-  velocity?: number;
-  mass?: number;
-  friction?: number;
-  tension?: number;
-  easing?: (t: number) => number;
-  delay?: number;
-  decay?: number | boolean; 
-  animationType?: InitialConfigType;
-  onAnimationEnd?: (value: any) => void;
-  listener?: (value: number) => void;
-  immediate?: boolean;
-  */}
-
         <table className="table">
           <tr>
             <th>Options</th>
