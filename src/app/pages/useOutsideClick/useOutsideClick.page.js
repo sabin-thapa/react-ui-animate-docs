@@ -21,8 +21,9 @@ export const UseOutsideClick = withSubHeading(() => {
     <>
       <Section>
         <Title>useOutsideClick</Title>
-
-        <Paragraph>Description</Paragraph>
+        <Paragraph>
+          This hook provides a way to handle clicks outside of any element.
+        </Paragraph>
       </Section>
 
       <Section>
