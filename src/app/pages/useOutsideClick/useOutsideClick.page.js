@@ -79,7 +79,7 @@ export const UseOutsideClick = withSubHeading(() => {
           {`import React from "react";
 import { useOutsideClick } from "react-ui-animate";
 
-export default function UseOutsideClick() {
+export default function() {
   const elemRef = React.useRef(null);
 
   useOutsideClick(

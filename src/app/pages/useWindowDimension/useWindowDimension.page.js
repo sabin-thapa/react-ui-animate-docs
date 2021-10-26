@@ -108,7 +108,7 @@ export const UseWindowDimension = withSubHeading(() => {
           {`import React from "react";
 import { useWindowDimension } from "react-ui-animate";
 
-export default function UseOutsideClick() {
+export default function() {
 
   useWindowDimension(
     function ({ innerWidth }) {
