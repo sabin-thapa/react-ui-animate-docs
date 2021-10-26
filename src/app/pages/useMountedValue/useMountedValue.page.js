@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
   SubTitle,
 } from "../../commons";
@@ -221,11 +220,6 @@ function SomeComponent() {
   );
 }`}
         </Code>
-
-        <NextPrevButton
-          left={{ text: "useAnimatedValue", to: "/docs/use-animated-value" }}
-          right={{ text: "useOutsideClick", to: "/docs/use-outside-click" }}
-        />
       </Section>
     </>
   );

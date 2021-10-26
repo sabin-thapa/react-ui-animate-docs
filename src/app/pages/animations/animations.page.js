@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { AnimatedBlock, interpolate, useAnimatedValue } from "react-ui-animate";
 
 import {
   Title,
@@ -8,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
 } from "../../commons";
 
@@ -326,11 +324,6 @@ export default function() {
   extrapolate: "clamp"
 });`}</Code>
       </Section>
-
-      <NextPrevButton
-        left={{ text: "Animated Values", to: "/docs/animated-values" }}
-        right={{ text: "Gestures", to: "/docs/gestures" }}
-      />
     </>
   );
 });

@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
   Tab,
 } from "../../commons";
@@ -132,11 +131,6 @@ export default function () {
           In next section we will cover{" "}
           <Highlight link="/docs/animated-values">Animated Values</Highlight>.
         </Paragraph>
-
-        <NextPrevButton
-          left={{ text: "About", to: "/docs/about" }}
-          right={{ text: "Animated Values", to: "/docs/animated-values" }}
-        />
       </Section>
     </>
   );

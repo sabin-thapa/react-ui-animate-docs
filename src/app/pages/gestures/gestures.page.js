@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
 } from "../../commons";
 import { Draggable } from "../../examples";
@@ -138,11 +137,6 @@ export default function() {
           movement in x-axis always starting from 0.
         </Paragraph>
       </Section>
-
-      <NextPrevButton
-        left={{ text: "Animations", to: "/docs/animations" }}
-        right={{ text: "useAnimatedValue", to: "/docs/use-animated-value" }}
-      />
     </>
   );
 });

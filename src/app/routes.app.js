@@ -33,6 +33,7 @@ export const publicPaths = [
     path: "/",
     component: () => <Redirect to="/docs/about" />,
     restricted: true,
+    visible: false,
   },
   {
     name: "DocsRoot",

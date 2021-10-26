@@ -5,7 +5,14 @@ import { publicPaths, privatePaths } from "./routes.app";
 import { userRoles, userType } from "./userRoles.app";
 
 // IMPORT COMMONS
-import { Header, SideNav, Label, AlertInfo, SubHeadings } from "./commons";
+import {
+  Header,
+  SideNav,
+  Label,
+  AlertInfo,
+  SubHeadings,
+  NextPrevButton,
+} from "./commons";
 
 const App = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -27,6 +34,7 @@ const App = () => {
           <Label>Version: 1.1.x</Label>
           <AlertInfo />
           <Auth.Screens />
+          <NextPrevButton />
         </div>
 
         <div className="pagecontainer-subheadings">

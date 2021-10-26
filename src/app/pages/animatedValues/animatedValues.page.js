@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
 } from "../../commons";
 
@@ -227,11 +226,6 @@ function SomeComponent() {
           read animated values.
         </Paragraph>
       </Section>
-
-      <NextPrevButton
-        left={{ text: "Getting Started", to: "/docs/getting-started" }}
-        right={{ text: "Animations", to: "/docs/animations" }}
-      />
     </>
   );
 });

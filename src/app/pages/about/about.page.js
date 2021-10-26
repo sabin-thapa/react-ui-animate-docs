@@ -6,7 +6,6 @@ import {
   Paragraph,
   Highlight,
   Section,
-  NextPrevButton,
   withSubHeading,
 } from "../../commons";
 
@@ -134,10 +133,6 @@ export const About = withSubHeading(() => {
             <HamburderMenu />
           </div>
         </div>
-
-        <NextPrevButton
-          right={{ text: "Getting Started", to: "/docs/getting-started" }}
-        />
       </Section>
     </>
   );

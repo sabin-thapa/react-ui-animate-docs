@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
   SubTitle,
 } from "../../commons";
@@ -102,14 +101,6 @@ export default function UseOutsideClick() {
   );
 }`}
         </Code>
-
-        <NextPrevButton
-          left={{ text: "useMountedValue", to: "/docs/use-mounted-value" }}
-          right={{
-            text: "useWindowDimension",
-            to: "/docs/use-window-dimension",
-          }}
-        />
       </Section>
     </>
   );

@@ -1,20 +1,37 @@
 import { useNavigation } from "react-auth-navigation";
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/all";
 
-import { Box } from "../";
-
-export const NextPrevButton = ({ left, right }) => {
+export const NextPrevButton = () => {
   const {
-    navigation: { navigate },
+    navigation: { navigate, routes },
+    location,
   } = useNavigation();
+
+  const routeKeys = Object.keys(routes);
+
+  const currentRoute = routeKeys.find((route) => {
+    return routes[route].path === location.pathname;
+  });
+
+  const currentRouteIndex = routeKeys.indexOf(currentRoute);
+
+  const prevNextRoute = routeKeys.reduce((acc, route, index) => {
+    if (index === currentRouteIndex - 1) {
+      acc = { ...acc, left: routes[route] };
+    } else if (index === currentRouteIndex + 1) {
+      acc = { ...acc, right: routes[route] };
+    }
+
+    return acc;
+  }, {});
 
   return (
     <div className="nextprev">
       <div className="nextprev-left">
-        {left && (
+        {prevNextRoute.left && (
           <button
             className="nextprev-button left"
-            onClick={() => navigate(left.to)}
+            onClick={() => navigate(prevNextRoute.left.path)}
           >
             <span className="nextprev-button-label">Previous</span>
 
@@ -25,22 +42,22 @@ export const NextPrevButton = ({ left, right }) => {
                   style={{ position: "relative", top: 6 }}
                 />{" "}
               </span>{" "}
-              <span>{left.text}</span>
+              <span>{prevNextRoute.left.name}</span>
             </span>
           </button>
         )}
       </div>
 
       <div className="nextprev-right">
-        {right && (
+        {prevNextRoute.right && (
           <button
             className="nextprev-button right"
-            onClick={() => navigate(right.to)}
+            onClick={() => navigate(prevNextRoute.right.path)}
           >
             <span className="nextprev-button-label">Next</span>
 
             <span className="nextprev-button-text">
-              <span className="text">{right.text}</span>
+              <span className="text">{prevNextRoute.right.name}</span>
               <span className="icon">
                 <BiChevronsRight
                   size={24}

@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
   SubTitle,
 } from "../../commons";
@@ -120,14 +119,6 @@ export default function UseOutsideClick() {
   return (...);
 }`}
         </Code>
-
-        <NextPrevButton
-          left={{ text: "useOutsideClick", to: "/docs/use-outside-click" }}
-          right={{
-            text: "useScroll",
-            to: "/docs/use-scroll",
-          }}
-        />
       </Section>
     </>
   );

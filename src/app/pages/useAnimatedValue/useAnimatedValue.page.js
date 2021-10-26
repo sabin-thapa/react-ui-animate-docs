@@ -7,7 +7,6 @@ import {
   Highlight,
   Code,
   Section,
-  NextPrevButton,
   withSubHeading,
   SubTitle,
 } from "../../commons";
@@ -208,11 +207,6 @@ export default function () {
   );
 }`}
         </Code>
-
-        <NextPrevButton
-          left={{ text: "Gestures", to: "/docs/gestures" }}
-          right={{ text: "useMountedValue", to: "/docs/use-mounted-value" }}
-        />
       </Section>
     </>
   );

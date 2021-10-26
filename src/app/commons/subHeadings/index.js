@@ -83,7 +83,7 @@ export const withSubHeading = (Component) => {
         if (scrollY >= subheading.offsetTop - 100) {
           anchors.forEach((a) => a.classList.remove("active"));
 
-          anchors[index].classList.add("active");
+          anchors[index]?.classList.add("active");
         }
       });
     }, []);
