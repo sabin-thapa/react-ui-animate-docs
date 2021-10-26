@@ -13,6 +13,7 @@ import {
   UseMountedValue,
   UseOutsideClick,
   UseWindowDimension,
+  UseMeasure,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -101,7 +102,7 @@ export const publicPaths = [
       {
         name: "useMeasure",
         path: "/use-measure",
-        component: Sample,
+        component: UseMeasure,
         restricted: true,
       },
       {

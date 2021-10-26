@@ -105,8 +105,7 @@ export const UseWindowDimension = withSubHeading(() => {
         </Paragraph>
 
         <Code>
-          {`import React from "react";
-import { useWindowDimension } from "react-ui-animate";
+          {`import { useWindowDimension } from "react-ui-animate";
 
 export default function() {
 
