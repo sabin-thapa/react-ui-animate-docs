@@ -11,6 +11,7 @@ import {
   Sample,
   UseAnimatedValue,
   UseMountedValue,
+  UseOutsideClick,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -86,7 +87,7 @@ export const publicPaths = [
       {
         name: "useOutsideClick",
         path: "/use-outside-click",
-        component: Sample,
+        component: UseOutsideClick,
         restricted: true,
       },
       {

@@ -7,3 +7,4 @@ export * from "./gestures";
 export * from "./sample";
 export * from "./useAnimatedValue";
 export * from "./useMountedValue";
+export * from "./useOutsideClick";
