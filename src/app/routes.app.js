@@ -15,6 +15,8 @@ import {
   UseWindowDimension,
   UseMeasure,
   UseScroll,
+  UseMouseMove,
+  UseDrag,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -115,13 +117,13 @@ export const publicPaths = [
       {
         name: "useMouseMove",
         path: "/use-mouse-move",
-        component: Sample,
+        component: UseMouseMove,
         restricted: true,
       },
       {
         name: "useDrag",
         path: "/use-drag",
-        component: Sample,
+        component: UseDrag,
         restricted: true,
       },
       {

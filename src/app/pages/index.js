@@ -11,3 +11,5 @@ export * from "./useOutsideClick";
 export * from "./useWindowDimension";
 export * from "./useMeasure";
 export * from "./useScroll";
+export * from "./useMouseMove";
+export * from "./useDrag";
