@@ -46,6 +46,11 @@ const SideNavComponent = () => {
                 name: "makeAnimatedComponent",
                 path: "/docs/make-animated-component",
               },
+            ],
+          },
+          {
+            name: "Utility Functions",
+            items: [
               { name: "clamp", path: "/docs/clamp" },
               { name: "rubberClamp", path: "/docs/rubber-clamp" },
               { name: "snapTo", path: "/docs/snap-to" },
