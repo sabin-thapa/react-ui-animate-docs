@@ -14,6 +14,7 @@ import {
   UseOutsideClick,
   UseWindowDimension,
   UseMeasure,
+  UseScroll,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -108,7 +109,7 @@ export const publicPaths = [
       {
         name: "useScroll",
         path: "/use-scroll",
-        component: Sample,
+        component: UseScroll,
         restricted: true,
       },
       {
