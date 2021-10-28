@@ -21,7 +21,7 @@ export const UseMouseMove = withSubHeading(() => {
       <Section>
         <Title>useMouseMove</Title>
         <Paragraph>
-          This hook provides a way to handle scroll event in any{" "}
+          This hook provides a way to handle mouse move event on a{" "}
           <Highlight>HTMLElement</Highlight> or <Highlight>window</Highlight>.
         </Paragraph>
       </Section>
@@ -36,9 +36,9 @@ export const UseMouseMove = withSubHeading(() => {
         <SubTitle type="[function]">callback</SubTitle>
 
         <Paragraph>
-          First argument is a callback function with{" "}
-          <Highlight>event</Highlight> object with measurements as its first
-          argument which is called initially and is called on every scroll.
+          First argument is a callback function with
+          <Highlight>event</Highlight> object as its first argument which is
+          called on every mouse move.
         </Paragraph>
 
         <Paragraph>
@@ -52,37 +52,44 @@ export const UseMouseMove = withSubHeading(() => {
             <th>Description</th>
           </tr>
           <tr>
-            <td>isScrolling</td>
-            <td>Boolean indicating the current status of scrolling.</td>
+            <td>target</td>
+            <td>
+              <Highlight>event.target</Highlight> element the mouse move is
+              hovered upon.
+            </td>
           </tr>
           <tr>
-            <td>scrollX</td>
-            <td>Horizontal scroll amount.</td>
+            <td>isMoving</td>
+            <td>Boolean indicating the current status of mouse movement.</td>
           </tr>
           <tr>
-            <td>scrollY</td>
-            <td>Vertical scroll amount.</td>
+            <td>mouseX</td>
+            <td>Horizontal mouse movement amount.</td>
+          </tr>
+          <tr>
+            <td>mouseY</td>
+            <td>Vertical mouse movement amount.</td>
           </tr>
           <tr>
             <td>velocityX</td>
-            <td>Velocity along horizontal scrolling direction.</td>
+            <td>Velocity along horizontal mouse movement direction.</td>
           </tr>
           <tr>
             <td>velocityY</td>
-            <td>Velocity along vertical scrolling direction.</td>
+            <td>Velocity along vertical mouse movement direction.</td>
           </tr>
           <tr>
             <td>directionX</td>
             <td>
-              Indicates the current horizontal scrolling direction. For positive
-              +1, for negative -1 and for not scrolling 0.
+              Indicates the current horizontal mouse movement direction. For
+              positive +1, for negative -1 and for not moving 0.
             </td>
           </tr>
           <tr>
             <td>directionY</td>
             <td>
-              Indicates the current vertical scrolling direction. For positive
-              +1, for negative -1 and for not scrolling 0.
+              Indicates the current vertical mouse movement direction. For
+              positive +1, for negative -1 and for not moving 0.
             </td>
           </tr>
         </table>
@@ -109,11 +116,11 @@ export const UseMouseMove = withSubHeading(() => {
 
         <Paragraph>Define a hook for window:</Paragraph>
 
-        <Code>{`useScroll(event => doSomething(event));}`}</Code>
+        <Code>{`useMouseMove(event => doSomething(event));}`}</Code>
 
         <Paragraph>Or you could bind it in any HTMLElement:</Paragraph>
 
-        <Code>{`const bind = useScroll(event => doSomething(event));}`}</Code>
+        <Code>{`const bind = useMouseMove(event => doSomething(event));}`}</Code>
 
         <Paragraph>
           Apply it on a <Highlight>HTMLELement</Highlight>:
@@ -132,18 +139,19 @@ export const UseMouseMove = withSubHeading(() => {
         </SecondaryTitle>
 
         <Paragraph>
-          In the below example, <Highlight>useScroll</Highlight> hook is used to
-          get <Highlight>scrollY</Highlight>.
+          In the below example, <Highlight>useMouseMove</Highlight> hook is used
+          to get <Highlight>mouseX</Highlight> and <Highlight>mouseY</Highlight>
+          .
         </Paragraph>
 
         <Code>
-          {`import { useScroll } from "react-ui-animate";
+          {`import { useMouseMove } from "react-ui-animate";
 
 export default function() {
 
-  const bind = useScroll(
-    function ({ scrollY }) {
-        console.log("Vertical scrolling amount", scrollY);
+  const bind = useMouseMove(
+    function ({ mouseX, mouseY }) {
+        console.log("XY", mouseX, mouseY);
     },
   );
 

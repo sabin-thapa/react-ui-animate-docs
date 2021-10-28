@@ -21,9 +21,8 @@ export const UseDrag = withSubHeading(() => {
       <Section>
         <Title>useDrag</Title>
         <Paragraph>
-          This hook provides a way to measure any{" "}
-          <Highlight>HTMLElement</Highlight>. It handles the resize of the
-          window.
+          This hook provides a way to make any{" "}
+          <Highlight>HTMLElement</Highlight> draggable.
         </Paragraph>
       </Section>
 
@@ -37,10 +36,9 @@ export const UseDrag = withSubHeading(() => {
         <SubTitle type="[function]">callback</SubTitle>
 
         <Paragraph>
-          First argument is a callback function with{" "}
-          <Highlight>event</Highlight> object with measurements as its first
-          argument which is called initially and is called on every resize of a
-          window.
+          First argument is a callback function with drag
+          <Highlight>event</Highlight> object as its first argument which is
+          called on every drag event.
         </Paragraph>
 
         <Paragraph>
@@ -54,44 +52,72 @@ export const UseDrag = withSubHeading(() => {
             <th>Description</th>
           </tr>
           <tr>
-            <td>left</td>
+            <td>args</td>
+            <td>Array of argument passed in bind function.</td>
+          </tr>
+          <tr>
+            <td>down</td>
+            <td>Boolean indicating the mouse click state.</td>
+          </tr>
+          <tr>
+            <td>movementX</td>
             <td>
-              Left position of a <Highlight>HTMLELement</Highlight>. It accounts
-              the horizontal page offset value.
+              Amount of movement in x-axis. Always starts from 0 while dragging.
             </td>
           </tr>
           <tr>
-            <td>top</td>
+            <td>movementY</td>
             <td>
-              Top position of a <Highlight>HTMLELement</Highlight>. It accounts
-              the vertical page offset value.
+              Amount of movement in y-axis. Always starts from 0 while dragging.
             </td>
           </tr>
           <tr>
-            <td>vLeft</td>
+            <td>offsetX</td>
             <td>
-              Left position of a <Highlight>HTMLELement</Highlight> relative to
-              viewport. It doesn't account horizontal page offset value.
+              Amount of movement with offset in x-axis. It saves the previous
+              movement and drag starts from previous position.
             </td>
           </tr>
           <tr>
-            <td>vTop</td>
+            <td>offsetY</td>
             <td>
-              Top position of a <Highlight>HTMLELement</Highlight> relative to
-              viewport. It doesn't account vertical page offset value.
+              Amount of movement with offset in y-axis. It saves the previous
+              movement and drag starts from previous position.
             </td>
           </tr>
           <tr>
-            <td>width</td>
+            <td>velocityX</td>
+            <td>Velocity along horizontal drag direction.</td>
+          </tr>
+          <tr>
+            <td>velocityY</td>
+            <td>Velocity along vertical drag direction.</td>
+          </tr>
+          <tr>
+            <td>directionX</td>
             <td>
-              Width of a <Highlight>HTMLELement</Highlight>
+              Indicates the current horizontal drag direction. For positive +1,
+              for negative -1 and for not dragging 0.
             </td>
           </tr>
           <tr>
-            <td>height</td>
+            <td>directionY</td>
             <td>
-              Height of a <Highlight>HTMLElement</Highlight>
+              Indicates the current vertical drag direction. For positive +1,
+              for negative -1 and for not dragging 0.
             </td>
+          </tr>
+          <tr>
+            <td>distanceX</td>
+            <td>Same as movementX but always positive.</td>
+          </tr>
+          <tr>
+            <td>distanceY</td>
+            <td>Same as movementY but always positive.</td>
+          </tr>
+          <tr>
+            <td>cancel</td>
+            <td>Function to cancel the current drag gesture.</td>
           </tr>
         </table>
 
@@ -115,7 +141,7 @@ export const UseDrag = withSubHeading(() => {
 
         <Paragraph>Define a bind function:</Paragraph>
 
-        <Code>{`const bind = useMeasure(event => doSomething(event));}`}</Code>
+        <Code>{`const bind = useDrag(event => doSomething(event));}`}</Code>
         <Paragraph>
           Apply it on a <Highlight>HTMLELement</Highlight>:
         </Paragraph>
@@ -131,43 +157,35 @@ export const UseDrag = withSubHeading(() => {
         </SecondaryTitle>
 
         <Paragraph>
-          In the below example, <Highlight>useMeasure</Highlight> hook is used
-          to measure the widths of a multiple mapped elements.
-        </Paragraph>
-
-        <Paragraph>
-          Multiple <Highlight>HTMLElements</Highlight> can be measured by
-          passing an argument in the returned function while spreading. All the
-          measurements are in array with same index as mapped elements.
+          In the below example, <Highlight>useDrag</Highlight> hook is used to
+          make a HTMLElement draggable.
         </Paragraph>
 
         <Code>
-          {`import { useMeasure } from "react-ui-animate";
+          {`import { useAnimatedValue, useDrag, AnimatedBlock } from "react-ui-animate";
 
 export default function() {
+  const left = useAnimatedValue(0);
 
-  const bind = useMeasure(
-    function ({ width }) {
-        console.log("width", width); // Array of widths
+  const bind = useDrag(
+    function ({ offsetX }) {
+        left.value = offsetX;
     },
   );
 
   return (
-    <>
-        {Array(5)
-          .fill(null)
-          .map((_, i) => (
-            <div
-              key={i}
-              {...bind(i)} // passed with index
-              style={{
-                width: 100,
-                height: 100,
-                backgroundColor: "#3399ff",
-              }}
-            />
-          ))}
-      </>
+    <AnimatedBlock
+        key={i}
+        {...bind()} // bind here
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: "#3399ff",
+          position: "absolute",
+          left: left.value,
+          top: 0,
+        }}
+    />
   );
 }`}
         </Code>

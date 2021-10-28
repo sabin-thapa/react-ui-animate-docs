@@ -37,8 +37,8 @@ export const UseScroll = withSubHeading(() => {
 
         <Paragraph>
           First argument is a callback function with{" "}
-          <Highlight>event</Highlight> object with measurements as its first
-          argument which is called initially and is called on every scroll.
+          <Highlight>event</Highlight> object as its first argument which is
+          called initially and is called on every scroll.
         </Paragraph>
 
         <Paragraph>
