@@ -1,10 +1,17 @@
-import { useDrag, useAnimatedValue, AnimatedBlock } from "react-ui-animate";
+import {
+  useDrag,
+  useAnimatedValue,
+  AnimatedBlock,
+  interpolate,
+} from "react-ui-animate";
 
 export const Draggable = () => {
   const left = useAnimatedValue(0, { animationType: "elastic" });
   const top = useAnimatedValue(0, { animationType: "elastic" });
+  const isDown = useAnimatedValue(0, { animationType: "elastic" });
 
   const bind = useDrag(({ down, movementX, movementY }) => {
+    isDown.value = down;
     left.value = down ? movementX : 0;
     top.value = down ? movementY : 0;
 
@@ -41,6 +48,15 @@ export const Draggable = () => {
           cursor: "grabbing",
           position: "absolute",
           zIndex: 1,
+          scale: interpolate(isDown.value, [0, 1], [1, 1.5]),
+          boxShadow: interpolate(
+            isDown.value,
+            [0, 1],
+            [
+              "0px 0px 10px rgba(0, 0, 0, 0.0)",
+              "0px 5px 10px rgba(0, 0, 0, 0.2)",
+            ]
+          ),
         }}
       >
         DRAG ME
