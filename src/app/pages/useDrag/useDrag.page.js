@@ -121,6 +121,30 @@ export const UseDrag = withSubHeading(() => {
           </tr>
         </table>
 
+        <SubTitle type="[object]">config?</SubTitle>
+
+        <Paragraph>
+          The second argument is an optional object which is called every time
+          on mouse / pointer down event.
+        </Paragraph>
+
+        <table className="table" style={{ marginBottom: 20 }}>
+          <tr>
+            <th>Options</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>initial</td>
+            <td>undefined</td>
+            <td>
+              Function called initially on mouse / pointer down. It must return
+              an object with <Highlight>movementX</Highlight> and{" "}
+              <Highlight>movementY</Highlight> properties.
+            </td>
+          </tr>
+        </table>
+
         <SubTitle type="[array]">deps?</SubTitle>
 
         <Paragraph>
