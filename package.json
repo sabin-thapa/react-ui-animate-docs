@@ -21,11 +21,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.0.2",
-    "react-ui-animate": "^1.1.8",
-    "read-excel-file": "^5.2.1",
+    "react-ui-animate": "^1.1.9",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.3.3",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^1.1.2"
   },
