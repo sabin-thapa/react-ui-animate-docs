@@ -127,6 +127,12 @@ export const publicPaths = [
         restricted: true,
       },
       {
+        name: "useWheel",
+        path: "/use-wheel",
+        component: Sample,
+        restricted: true,
+      },
+      {
         name: "interpolate",
         path: "/interpolate",
         component: Sample,

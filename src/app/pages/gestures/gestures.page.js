@@ -43,15 +43,19 @@ export const Gestures = withSubHeading(() => {
           <ul className="spaced">
             <li>
               <Highlight link="/docs/use-scroll">useScroll</Highlight> for
-              scroll gesture
+              scroll gesture.
             </li>
             <li>
               <Highlight link="/docs/use-mouse-move">useMouseMove</Highlight>{" "}
-              for mouse move gesture
+              for mouse move gesture.
             </li>
             <li>
               <Highlight link="/docs/use-drag">useDrag</Highlight> for drag
-              gesture
+              gesture.
+            </li>
+            <li>
+              <Highlight link="/docs/use-wheel">useWheel</Highlight> for mouse
+              wheel gesture.
             </li>
           </ul>
         </Paragraph>

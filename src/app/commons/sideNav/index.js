@@ -35,6 +35,7 @@ const SideNavComponent = () => {
               { name: "useScroll", path: "/docs/use-scroll" },
               { name: "useMouseMove", path: "/docs/use-mouse-move" },
               { name: "useDrag", path: "/docs/use-drag" },
+              { name: "useWheel", path: "/docs/use-wheel" },
             ],
           },
           {
