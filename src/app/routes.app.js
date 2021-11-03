@@ -17,6 +17,7 @@ import {
   UseScroll,
   UseMouseMove,
   UseDrag,
+  UseWheel,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -129,7 +130,7 @@ export const publicPaths = [
       {
         name: "useWheel",
         path: "/use-wheel",
-        component: Sample,
+        component: UseWheel,
         restricted: true,
       },
       {
