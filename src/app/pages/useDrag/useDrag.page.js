@@ -199,7 +199,6 @@ export default function() {
 
   return (
     <AnimatedBlock
-        key={i}
         {...bind()} // bind here
         style={{
           width: 100,
