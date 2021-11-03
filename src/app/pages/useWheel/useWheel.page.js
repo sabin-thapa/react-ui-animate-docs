@@ -38,7 +38,7 @@ export const UseWheel = withSubHeading(() => {
         <Paragraph>
           First argument is a callback function with drag
           <Highlight>event</Highlight> object as its first argument which is
-          called on every drag event.
+          called on every wheel event.
         </Paragraph>
 
         <Paragraph>
@@ -52,95 +52,64 @@ export const UseWheel = withSubHeading(() => {
             <th>Description</th>
           </tr>
           <tr>
-            <td>args</td>
-            <td>Array of argument passed in bind function.</td>
+            <td>target</td>
+            <td>Current target element to which the wheel event bound to.</td>
+          </tr>
+
+          <tr>
+            <td>deltaX</td>
+            <td>Wheel delta amount along horizontal axis.</td>
           </tr>
           <tr>
-            <td>down</td>
-            <td>Boolean indicating the mouse click state.</td>
+            <td>deltaY</td>
+            <td>Wheel delta amount along vertical axis.</td>
           </tr>
           <tr>
             <td>movementX</td>
             <td>
-              Amount of movement in x-axis. Always starts from 0 while dragging.
+              Amount of movement in x-axis. Always starts from 0 while wheeling.
             </td>
           </tr>
           <tr>
             <td>movementY</td>
             <td>
-              Amount of movement in y-axis. Always starts from 0 while dragging.
+              Amount of movement in y-axis. Always starts from 0 while wheeling.
             </td>
           </tr>
           <tr>
             <td>offsetX</td>
             <td>
               Amount of movement with offset in x-axis. It saves the previous
-              movement and drag starts from previous position.
+              movement and wheel starts from previous position.
             </td>
           </tr>
           <tr>
             <td>offsetY</td>
             <td>
               Amount of movement with offset in y-axis. It saves the previous
-              movement and drag starts from previous position.
+              movement and wheel starts from previous position.
             </td>
           </tr>
           <tr>
             <td>velocityX</td>
-            <td>Velocity along horizontal drag direction.</td>
+            <td>Velocity along horizontal wheel direction.</td>
           </tr>
           <tr>
             <td>velocityY</td>
-            <td>Velocity along vertical drag direction.</td>
+            <td>Velocity along vertical wheel direction.</td>
           </tr>
           <tr>
             <td>directionX</td>
             <td>
-              Indicates the current horizontal drag direction. For positive +1,
-              for negative -1 and for not dragging 0.
+              Indicates the current horizontal wheel direction. For positive +1,
+              for negative -1 and for not wheeling 0.
             </td>
           </tr>
           <tr>
             <td>directionY</td>
             <td>
-              Indicates the current vertical drag direction. For positive +1,
-              for negative -1 and for not dragging 0.
-            </td>
-          </tr>
-          <tr>
-            <td>distanceX</td>
-            <td>Same as movementX but always positive.</td>
-          </tr>
-          <tr>
-            <td>distanceY</td>
-            <td>Same as movementY but always positive.</td>
-          </tr>
-          <tr>
-            <td>cancel</td>
-            <td>Function to cancel the current drag gesture.</td>
-          </tr>
-        </table>
-
-        <SubTitle type="[object]">config?</SubTitle>
-
-        <Paragraph>
-          The second argument is an optional object which is called every time
-          on mouse / pointer down event.
-        </Paragraph>
-
-        <table className="table" style={{ marginBottom: 20 }}>
-          <tr>
-            <th>Options</th>
-            <th>Default</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>initial</td>
-            <td>undefined</td>
-            <td>
-              Function called initially on mouse / pointer down. It must return
-              an object with <Highlight>movementX</Highlight> and{" "}
-              <Highlight>movementY</Highlight> properties.
+              Indicates the current vertical wheel direction. For positive +1,
+              for negative -1 and for not wheeling 0.
             </td>
           </tr>
         </table>
@@ -165,7 +134,7 @@ export const UseWheel = withSubHeading(() => {
 
         <Paragraph>Define a bind function:</Paragraph>
 
-        <Code>{`const bind = useDrag(event => doSomething(event));}`}</Code>
+        <Code>{`const bind = useWheel(event => doSomething(event));}`}</Code>
         <Paragraph>
           Apply it on a <Highlight>HTMLELement</Highlight>:
         </Paragraph>
@@ -181,19 +150,19 @@ export const UseWheel = withSubHeading(() => {
         </SecondaryTitle>
 
         <Paragraph>
-          In the below example, <Highlight>useDrag</Highlight> hook is used to
-          make a HTMLElement draggable.
+          In the below example, <Highlight>useWheel</Highlight> hook is used to
+          capture wheel event on <Highlight>HTMLElement</Highlight>.
         </Paragraph>
 
         <Code>
-          {`import { useAnimatedValue, useDrag, AnimatedBlock } from "react-ui-animate";
+          {`import { useAnimatedValue, useWheel, AnimatedBlock } from "react-ui-animate";
 
 export default function() {
   const left = useAnimatedValue(0);
 
-  const bind = useDrag(
-    function ({ offsetX }) {
-        left.value = offsetX;
+  const bind = useWheel(
+    function ({ movementX, isWheeling }) {
+        left.value = isWheeling ? movementX : 0;
     },
   );
 
