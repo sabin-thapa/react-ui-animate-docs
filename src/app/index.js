@@ -14,6 +14,8 @@ import {
   NextPrevButton,
 } from "./commons";
 
+import { version } from "../version";
+
 const App = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
@@ -31,7 +33,7 @@ const App = () => {
 
       <div className="pagecontainer">
         <div className="pagecontainer-content">
-          <Label>Version: 1.1.x</Label>
+          <Label>Version: {version}</Label>
           <AlertInfo />
           <Auth.Screens />
           <NextPrevButton />

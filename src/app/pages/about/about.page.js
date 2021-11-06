@@ -36,6 +36,24 @@ export const About = withSubHeading(() => {
           In todays world, interactive and smooth web applications are preferred
           by everyone. Animations on web without any performance drops is very
           important and also we want controlled animations.
+        </Paragraph>
+
+        <Paragraph>
+          This library represents a modern approach to animation. It is very
+          much inspired by{" "}
+          <Highlight link="https://react-spring.io/" external>
+            react-spring
+          </Highlight>{" "}
+          and{" "}
+          <Highlight link="https://github.com/animatedjs/animated" external>
+            animated
+          </Highlight>
+          . It provides very ease of use APIs to implement physics based spring
+          and duration based timing animations with performance. It also
+          provides different hooks to implement gestures on web.
+        </Paragraph>
+
+        <Paragraph>
           <Highlight
             external
             link="https://www.npmjs.com/package/react-ui-animate"

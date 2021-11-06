@@ -1,7 +1,10 @@
 import React from "react";
+import { MdMenu, MdClose } from "react-icons/all";
 import { useAuth } from "react-auth-navigation";
 
-import { MdMenu, MdClose } from "react-icons/all";
+import { Label } from "../";
+
+import { version } from "../../../version";
 
 export const Header = () => {
   const { drawerOpen, setDrawerOpen } = useAuth();
@@ -18,16 +21,7 @@ export const Header = () => {
         <h2 className="header__title">React UI Animate</h2>
 
         <div className="npmversion">
-          <a href="https://badge.fury.io/js/react-ui-animate">
-            <img
-              src="https://badge.fury.io/js/react-ui-animate.svg"
-              alt="npm version"
-              style={{
-                width: 220 / 2,
-                height: 40 / 2,
-              }}
-            />
-          </a>
+          <Label>Version: {version}</Label>
         </div>
       </nav>
     </div>
