@@ -23,11 +23,11 @@ export const UseAnimatedValue = withSubHeading(() => {
 
         <Paragraph>
           <Highlight>useAnimatedValue</Highlight> is a hook that returns an
-          object containing properties like: <Highlight>.value</Highlight>,{" "}
-          <Highlight>.currentValue</Highlight>, etc. Animated Value objects
-          serve as references to pieces of shared animation data that can be
-          accessed and modified using their <Highlight>.value</Highlight>{" "}
-          property. It is important to remember that
+          object containing properties like: <Highlight>.value</Highlight> and{" "}
+          <Highlight>.currentValue</Highlight>. Animated Value objects serve as
+          references to pieces of shared animation data that can be accessed and
+          modified using their <Highlight>.value</Highlight> property. It is
+          important to remember that
           <Highlight>.value</Highlight> property must be used to modify or to
           read data. <Highlight>useAnimatedValue</Highlight> is similar to{" "}
           <Highlight>useRef</Highlight>, it also stores the data until the
@@ -117,16 +117,6 @@ export const UseAnimatedValue = withSubHeading(() => {
             <td>Linear by default, you can use Easing module.</td>
           </tr>
           <tr>
-            <td>delay</td>
-            <td>0</td>
-            <td>Number of milliseconds after which the animation is started</td>
-          </tr>
-          <tr>
-            <td>velocity</td>
-            <td>0</td>
-            <td>Initial velocity</td>
-          </tr>
-          <tr>
             <td>decay</td>
             <td>false</td>
             <td>Should apply decay animation.</td>
@@ -154,19 +144,11 @@ export const UseAnimatedValue = withSubHeading(() => {
           value can be updated and read by HOCs using{" "}
           <Highlight>.value</Highlight> attribute. To read current value for
           conditional operations, we use <Highlight>.currentValue</Highlight>.
-          We can update <Highlight>immediate</Highlight> by assigning boolean
-          value to it.
+          We can do immediate update by passing object to{" "}
+          <Highlight>.value</Highlight> property.
         </Paragraph>
 
-        <Code>{`opacity.immediate = true`}</Code>
-
-        <Paragraph>
-          To apply decay animation, we use <Highlight>decay</Highlight> which
-          accepts an object with <Highlight>value: boolean</Highlight> and{" "}
-          <Highlight>velocity: number</Highlight> properties.
-        </Paragraph>
-
-        <Code>{`opacity.decay = { value: true, velocity: 0.998 }`}</Code>
+        <Code>{`opacity.value = { toValue: 100, immediate: true }`}</Code>
       </Section>
 
       <Section>

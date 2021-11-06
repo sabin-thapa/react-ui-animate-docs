@@ -34,11 +34,11 @@ export const AnimatedValues = withSubHeading(() => {
 
         <Paragraph>
           <Highlight>useAnimatedValue</Highlight> is a hook that returns an
-          object containing properties like: <Highlight>.value</Highlight>,{" "}
-          <Highlight>.currentValue</Highlight>, etc. Animated Value objects
-          serve as references to pieces of shared animation data that can be
-          accessed and modified using their <Highlight>.value</Highlight>{" "}
-          property. It is important to remember that
+          object containing properties like: <Highlight>.value</Highlight> and{" "}
+          <Highlight>.currentValue</Highlight>. Animated Value objects serve as
+          references to pieces of shared animation data that can be accessed and
+          modified using their <Highlight>.value</Highlight> property. It is
+          important to remember that
           <Highlight>.value</Highlight> property must be used to modify or to
           read data. <Highlight>useAnimatedValue</Highlight> is similar to{" "}
           <Highlight>useRef</Highlight>, it also stores the data until the
@@ -143,13 +143,17 @@ export default function () {
           hook:
         </Paragraph>
         <Code>
-          {`const mountedFunction = useMountedValue(boolean, [from, enter, exit]);`}
+          {`const mountedFunction = useMountedValue(boolean, { 
+  from: number,
+  enter: number, 
+  exit: number,
+});`}
         </Code>
         <Paragraph>
           <Highlight>useMountedValue</Highlight> returns a function when a state
           and phases are passed as first and second arguments. The first
           argument must be a <Highlight>boolean</Highlight> state and second
-          argument is an array with three phases{" "}
+          argument is an object with three phases property,{" "}
           <Highlight>from, enter and exit</Highlight>. The phases{" "}
           <Highlight>from, enter and exit</Highlight> are three numeric values
           which defines the transition lifecycle of a component when it mounts
@@ -162,7 +166,7 @@ import { useMountedValue } from "react-ui-animate";
 function SomeComponent() {
   const [visible, setVisible] = useState(false);
 
-  const open = useMountedValue(visible, [0, 1, 0]);
+  const open = useMountedValue(visible, { from: 0, enter: 1, exit: 0 });
 
   return (
     <div>
@@ -178,8 +182,8 @@ function SomeComponent() {
         <Paragraph>
           In the above example, by default the state is{" "}
           <Highlight>visible = false</Highlight> and the phases are{" "}
-          <Highlight>phases = [ 0, 1, 0 ]</Highlight>. Now, lets use the mounted
-          function <Highlight>open</Highlight> with a component.
+          <Highlight>{`{from: 0, enter: 1, exit: 0}`}</Highlight>. Now, lets use
+          the mounted function <Highlight>open</Highlight> with a component.
         </Paragraph>
         <Code>
           {`import { useState } from "react";
@@ -188,7 +192,7 @@ import { useMountedValue } from "react-ui-animate";
 function SomeComponent() {
   const [visible, setVisible] = useState(false);
 
-  const open = useMountedValue(visible, [0, 1, 0]);
+  const open = useMountedValue(visible, { from: 0, enter: 1, exit: 0 });
 
   return (
     <div>
@@ -218,12 +222,12 @@ function SomeComponent() {
         <Paragraph>
           In the above example, <Highlight>open</Highlight> function receives a
           callback that receives two arguments: the Animated Value and a boolean
-          respectively. The first argument, Animated Value animates from
-          phases[0] = 0 to phases[1] = 1 when the visible is true and phases[1]
-          = 1 to phases[2] = 0 when visible is false. And the second argument,
-          boolean dinamically determines whether the component is mounted or not
-          after animation. <Highlight>AnimatedBlock</Highlight> HOC is used to
-          read animated values.
+          respectively. The first argument, Animated Value animates from from =
+          0 to enter = 1 when the visible is true and enter = 1 to exit = 0 when
+          visible is false. And the second argument, boolean dinamically
+          determines whether the component is mounted or not after animation.{" "}
+          <Highlight>AnimatedBlock</Highlight> HOC is used to read animated
+          values.
         </Paragraph>
       </Section>
     </>

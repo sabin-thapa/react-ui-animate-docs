@@ -27,7 +27,7 @@ export const UseMountedValue = withSubHeading(() => {
           <Highlight>useMountedValue</Highlight> returns a function when a state
           and phases are passed as first and second arguments. The first
           argument must be a <Highlight>boolean</Highlight> state and second
-          argument is an array with three phases{" "}
+          argument is an object with three phases property,{" "}
           <Highlight>from, enter and exit</Highlight>. The phases{" "}
           <Highlight>from, enter and exit</Highlight> are three numeric values
           which defines the transition lifecycle of a component when it mounts
@@ -50,13 +50,6 @@ export const UseMountedValue = withSubHeading(() => {
           triggers the animation and mounting/unmounting of component occurs.
         </Paragraph>
 
-        <SubTitle type="[array]">phases</SubTitle>
-
-        <Paragraph>
-          Array of three numbers <Highlight>[from, enter, exit]</Highlight>{" "}
-          which the animation value is assigned for three phases.
-        </Paragraph>
-
         <SubTitle type="[object]">config?</SubTitle>
 
         <Paragraph>
@@ -71,11 +64,49 @@ export const UseMountedValue = withSubHeading(() => {
             <th>Description</th>
           </tr>
           <tr>
+            <td>from</td>
+            <td>undefined</td>
+            <td>Initial state of animation value when component mounts</td>
+          </tr>
+          <tr>
+            <td>enter</td>
+            <td>undefined</td>
+            <td>
+              Animation value animates from `from` phase to `enter` phase when
+              component mounts
+            </td>
+          </tr>
+          <tr>
+            <td>exit</td>
+            <td>undefined</td>
+            <td>
+              Animation value animates from `enter` phase to `exit` phase when
+              state is false and component unmounts
+            </td>
+          </tr>
+          <tr>
+            <td>config?</td>
+            <td>undefined</td>
+            <td>Animation configuration object</td>
+          </tr>
+        </table>
+
+        <Paragraph>
+          Config object is animation configuration object with following
+          properties:
+        </Paragraph>
+
+        <table className="table">
+          <tr>
+            <th>Options</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+          <tr>
             <td>animationType</td>
             <td>"ease"</td>
             <td>Default spring type animation</td>
           </tr>
-
           <tr>
             <td>mass</td>
             <td>1</td>
@@ -132,16 +163,6 @@ export const UseMountedValue = withSubHeading(() => {
             <td>Number of milliseconds after which the animation is started</td>
           </tr>
           <tr>
-            <td>velocity</td>
-            <td>0</td>
-            <td>Initial velocity</td>
-          </tr>
-          <tr>
-            <td>decay</td>
-            <td>false</td>
-            <td>Should apply decay animation.</td>
-          </tr>
-          <tr>
             <td>onAnimationEnd</td>
             <td>undefined</td>
             <td>Function called after animation is completed.</td>
@@ -166,7 +187,7 @@ export const UseMountedValue = withSubHeading(() => {
         </Paragraph>
 
         <Code>
-          {`const mountedFunction = useMountedValue(boolean, [from, enter, exit]);`}
+          {`const mountedFunction = useMountedValue(boolean, { from: 0, enter: 1, exit: 0 });`}
         </Code>
       </Section>
 
@@ -178,12 +199,12 @@ export const UseMountedValue = withSubHeading(() => {
         <Paragraph>
           In the below example, <Highlight>open</Highlight> function receives a
           callback that receives two arguments: the Animated Value and a boolean
-          respectively. The first argument, Animated Value animates from
-          phases[0] = 0 to phases[1] = 1 when the visible is true and phases[1]
-          = 1 to phases[2] = 0 when visible is false. And the second argument,
-          boolean dinamically determines whether the component is mounted or not
-          after animation. <Highlight>AnimatedBlock</Highlight> HOC is used to
-          read animated values.
+          respectively. The first argument, Animated Value animates from from =
+          0 to enter = 1 when the visible is true and enter = 1 to exit = 0 when
+          visible is false. And the second argument, boolean dinamically
+          determines whether the component is mounted or not after animation.{" "}
+          <Highlight>AnimatedBlock</Highlight> HOC is used to read animated
+          values.
         </Paragraph>
 
         <Code>
@@ -193,7 +214,7 @@ import { useMountedValue } from "react-ui-animate";
 function SomeComponent() {
   const [visible, setVisible] = useState(false);
 
-  const open = useMountedValue(visible, [0, 1, 0]);
+  const open = useMountedValue(visible, { from: 0, enter: 1, exit: 0 });
 
   return (
     <div>
