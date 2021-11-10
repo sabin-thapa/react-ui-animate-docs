@@ -30,7 +30,7 @@ export const NavGroup = ({ title, navItems }) => {
         <AnimatedInline
           className="dropdownicon"
           style={{
-            rotate: bInterpolate(expandAnimation.value, [0, 180]),
+            rotate: bInterpolate(expandAnimation.value, 0, 180),
           }}
         >
           <BsFillCaretDownFill size={12} />

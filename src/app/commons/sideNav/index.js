@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "react-auth-navigation";
-import { AnimatedBlock, useMountedValue, interpolate } from "react-ui-animate";
+import { AnimatedBlock, useAnimatedValue, interpolate } from "react-ui-animate";
 
 import { ParentGroup } from "./components";
 
@@ -66,27 +66,21 @@ const SideNavComponent = () => {
 
 export const SideNav = () => {
   const { drawerOpen } = useAuth();
-  const mountedValue = useMountedValue(drawerOpen, [0, 1, 0]);
+  const animation = useAnimatedValue(drawerOpen);
 
   return (
     <div className="sidenav">
       <div className="sidenav-web">
         <SideNavComponent />
       </div>
-
-      {mountedValue(
-        (animation, mounted) =>
-          mounted && (
-            <AnimatedBlock
-              style={{
-                translateX: interpolate(animation.value, [0, 1], [-340, 0]),
-              }}
-              className="sidenav-mobile"
-            >
-              <SideNavComponent />
-            </AnimatedBlock>
-          )
-      )}
+      <AnimatedBlock
+        style={{
+          translateX: interpolate(animation.value, [0, 1], [-340, 0]),
+        }}
+        className="sidenav-mobile"
+      >
+        <SideNavComponent />
+      </AnimatedBlock>
     </div>
   );
 };

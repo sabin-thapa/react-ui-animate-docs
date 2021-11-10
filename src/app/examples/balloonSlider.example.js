@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   AnimatedBlock,
   useAnimatedValue,
@@ -11,15 +11,19 @@ export function BalloonSlider() {
   const offsetLeft = useRef(0);
   const left = useAnimatedValue(0, { immediate: true });
   const isDown = useAnimatedValue(0);
-  const balloonLeft = useAnimatedValue(left.value);
+  const balloonLeft = useAnimatedValue(0);
   const velocity = useAnimatedValue(0);
+
+  const [ballXValue, setBallXValue] = useState(0);
 
   const bind = useDrag(({ movementX, down, velocityX }) => {
     isDown.value = down ? 1 : 0;
     velocity.value = velocityX;
     const ballX = clamp(movementX + offsetLeft.current, 0, 290);
+    setBallXValue(ballX);
     if (down) {
       left.value = ballX;
+      balloonLeft.value = ballX;
     } else {
       offsetLeft.current = ballX;
     }
@@ -53,7 +57,7 @@ export function BalloonSlider() {
             rotate: interpolate(velocity.value, [-2, 2], [30, -30]),
           }}
         >
-          {left.value}
+          {ballXValue}
         </AnimatedBlock>
 
         <div style={{ position: "relative", height: 20, marginTop: 100 }}>

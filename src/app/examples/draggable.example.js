@@ -3,6 +3,7 @@ import {
   useAnimatedValue,
   AnimatedBlock,
   interpolate,
+  bin,
 } from "react-ui-animate";
 
 export const Draggable = () => {
@@ -11,12 +12,9 @@ export const Draggable = () => {
   const isDown = useAnimatedValue(0, { animationType: "elastic" });
 
   const bind = useDrag(({ down, movementX, movementY }) => {
-    isDown.value = down;
-    left.value = down ? movementX : 0;
-    top.value = down ? movementY : 0;
-
-    left.immediate = down;
-    top.immediate = down;
+    isDown.value = bin(down);
+    left.value = { toValue: down ? movementX : 0, immediate: down };
+    top.value = { toValue: down ? movementY : 0, immediate: down };
   });
 
   return (
