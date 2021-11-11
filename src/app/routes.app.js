@@ -18,6 +18,7 @@ import {
   UseMouseMove,
   UseDrag,
   UseWheel,
+  Interpolate,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -136,7 +137,7 @@ export const publicPaths = [
       {
         name: "interpolate",
         path: "/interpolate",
-        component: Sample,
+        component: Interpolate,
         restricted: true,
       },
       {

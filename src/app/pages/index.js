@@ -14,3 +14,4 @@ export * from "./useScroll";
 export * from "./useMouseMove";
 export * from "./useDrag";
 export * from "./useWheel";
+export * from "./interpolate";
