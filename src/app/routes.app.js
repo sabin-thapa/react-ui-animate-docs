@@ -8,7 +8,6 @@ import {
   AnimatedValues,
   Animations,
   Gestures,
-  Sample,
   UseAnimatedValue,
   UseMountedValue,
   UseOutsideClick,
@@ -20,6 +19,10 @@ import {
   UseWheel,
   Interpolate,
   BInterpolate,
+  MakeAnimatedComponent,
+  Clamp,
+  RubberClamp,
+  SnapTo,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -150,25 +153,25 @@ export const publicPaths = [
       {
         name: "makeAnimatedComponent",
         path: "/make-animated-component",
-        component: Sample,
+        component: MakeAnimatedComponent,
         restricted: true,
       },
       {
         name: "clamp",
         path: "/clamp",
-        component: Sample,
+        component: Clamp,
         restricted: true,
       },
       {
         name: "rubberClamp",
         path: "/rubber-clamp",
-        component: Sample,
+        component: RubberClamp,
         restricted: true,
       },
       {
         name: "snapTo",
         path: "/snap-to",
-        component: Sample,
+        component: SnapTo,
         restricted: true,
       },
     ],

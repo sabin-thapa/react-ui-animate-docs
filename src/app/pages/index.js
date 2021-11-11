@@ -16,3 +16,7 @@ export * from "./useDrag";
 export * from "./useWheel";
 export * from "./interpolate";
 export * from "./bInterpolate";
+export * from "./makeAnimatedComponent";
+export * from "./clamp";
+export * from "./rubberClamp";
+export * from "./snapTo";
