@@ -123,7 +123,7 @@ export const UseWheel = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle id="example" isSubHeading>
+        <SecondaryTitle id="returns" isSubHeading>
           Returns
         </SecondaryTitle>
 

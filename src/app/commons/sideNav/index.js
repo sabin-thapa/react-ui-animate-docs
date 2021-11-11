@@ -55,7 +55,6 @@ const SideNavComponent = () => {
               { name: "clamp", path: "/docs/clamp" },
               { name: "rubberClamp", path: "/docs/rubber-clamp" },
               { name: "snapTo", path: "/docs/snap-to" },
-              { name: "mix", path: "/docs/mix" },
             ],
           },
         ]}

@@ -87,7 +87,7 @@ export const UseWindowDimension = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle id="example" isSubHeading>
+        <SecondaryTitle id="returns" isSubHeading>
           Returns
         </SecondaryTitle>
 

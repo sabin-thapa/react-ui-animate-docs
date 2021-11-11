@@ -15,3 +15,4 @@ export * from "./useMouseMove";
 export * from "./useDrag";
 export * from "./useWheel";
 export * from "./interpolate";
+export * from "./bInterpolate";

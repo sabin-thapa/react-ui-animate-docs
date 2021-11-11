@@ -103,7 +103,7 @@ export const UseMouseMove = withSubHeading(() => {
       </Section>
 
       <Section>
-        <SecondaryTitle id="example" isSubHeading>
+        <SecondaryTitle id="returns" isSubHeading>
           Returns
         </SecondaryTitle>
 

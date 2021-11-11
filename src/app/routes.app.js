@@ -19,6 +19,7 @@ import {
   UseDrag,
   UseWheel,
   Interpolate,
+  BInterpolate,
 } from "./pages";
 
 export const Redirect = ({ to }) => {
@@ -143,7 +144,7 @@ export const publicPaths = [
       {
         name: "bInterpolate",
         path: "/binterpolate",
-        component: Sample,
+        component: BInterpolate,
         restricted: true,
       },
       {
@@ -167,12 +168,6 @@ export const publicPaths = [
       {
         name: "snapTo",
         path: "/snap-to",
-        component: Sample,
-        restricted: true,
-      },
-      {
-        name: "mix",
-        path: "/mix",
         component: Sample,
         restricted: true,
       },
