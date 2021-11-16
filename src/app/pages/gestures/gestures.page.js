@@ -57,6 +57,10 @@ export const Gestures = withSubHeading(() => {
               <Highlight link="/docs/use-wheel">useWheel</Highlight> for mouse
               wheel gesture.
             </li>
+            <li>
+              <Highlight link="/docs/use-gesture">useGesture</Highlight> for
+              combined gestures.
+            </li>
           </ul>
         </Paragraph>
       </Section>

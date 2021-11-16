@@ -14,6 +14,7 @@ export * from "./useScroll";
 export * from "./useMouseMove";
 export * from "./useDrag";
 export * from "./useWheel";
+export * from "./useGesture";
 export * from "./interpolate";
 export * from "./bInterpolate";
 export * from "./makeAnimatedComponent";

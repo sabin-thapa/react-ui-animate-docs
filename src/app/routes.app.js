@@ -17,6 +17,7 @@ import {
   UseMouseMove,
   UseDrag,
   UseWheel,
+  UseGesture,
   Interpolate,
   BInterpolate,
   MakeAnimatedComponent,
@@ -136,6 +137,12 @@ export const publicPaths = [
         name: "useWheel",
         path: "/use-wheel",
         component: UseWheel,
+        restricted: true,
+      },
+      {
+        name: "useGesture",
+        path: "/use-gesture",
+        component: UseGesture,
         restricted: true,
       },
       {
