@@ -57,7 +57,7 @@ export const AnimatedValues = withSubHeading(() => {
           It returns a mutable object whose <Highlight>.value</Highlight>{" "}
           property is initialized to the passed argument{" "}
           <Highlight>initialValue</Highlight>. This can be any primitive like
-          number, boolean, string or Animation Values it self.
+          number or string.
         </Paragraph>
 
         <Paragraph>

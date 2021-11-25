@@ -50,14 +50,12 @@ export const UseAnimatedValue = withSubHeading(() => {
 
         <br />
 
-        <SubTitle type="[number|boolean|string|AnimatedValue]">
-          initialValue
-        </SubTitle>
+        <SubTitle type="[number|string]">initialValue</SubTitle>
 
         <Paragraph>
           The first argument takes the initial value, which could be any of
-          these primitivs: number, boolean, string or AnimatedValue. The value
-          then can be read and updated from the Animated Value reference using{" "}
+          these primitivs: number or string. The value then can be read and
+          updated from the Animated Value reference using{" "}
           <Highlight>.value</Highlight> attribute.
         </Paragraph>
 

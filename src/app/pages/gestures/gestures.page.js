@@ -59,7 +59,7 @@ export const Gestures = withSubHeading(() => {
             </li>
             <li>
               <Highlight link="/docs/use-gesture">useGesture</Highlight> for
-              combined gestures.
+              multiple gestures.
             </li>
           </ul>
         </Paragraph>

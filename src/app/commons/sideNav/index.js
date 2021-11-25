@@ -1,6 +1,11 @@
 import React from "react";
 import { useAuth } from "react-auth-navigation";
-import { AnimatedBlock, useAnimatedValue, interpolate } from "react-ui-animate";
+import {
+  AnimatedBlock,
+  useAnimatedValue,
+  interpolate,
+  bin,
+} from "react-ui-animate";
 
 import { ParentGroup } from "./components";
 
@@ -66,7 +71,7 @@ const SideNavComponent = () => {
 
 export const SideNav = () => {
   const { drawerOpen } = useAuth();
-  const animation = useAnimatedValue(drawerOpen);
+  const animation = useAnimatedValue(bin(drawerOpen));
 
   return (
     <div className="sidenav">

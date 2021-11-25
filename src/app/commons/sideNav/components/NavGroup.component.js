@@ -6,6 +6,7 @@ import {
   AnimatedBlock,
   AnimatedInline,
   bInterpolate,
+  bin,
 } from "react-ui-animate";
 import { BsFillCaretDownFill } from "react-icons/all";
 
@@ -16,7 +17,7 @@ export const NavGroup = ({ title, navItems }) => {
     setHeight(h);
   });
   const [expanded, setExpanded] = useState(true);
-  const expandAnimation = useAnimatedValue(expanded);
+  const expandAnimation = useAnimatedValue(bin(expanded));
   const animatedHeight = useAnimatedValue(expanded ? height : 0);
 
   return (
