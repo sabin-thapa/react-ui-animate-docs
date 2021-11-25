@@ -105,7 +105,7 @@ export const UseGesture = withSubHeading(() => {
           {`import { useGesture, AnimatedBlock } from "react-ui-animate";
 
 export default function() {
-  const bind = useDrag({
+  const bind = useGesture({
     onDrag: function({ movementX }) { ... },
     onWheel: function({ deltaX }) { ... },
   });
