@@ -144,13 +144,6 @@ export const UseDrag = withSubHeading(() => {
             </td>
           </tr>
         </table>
-
-        <SubTitle type="[array]">deps?</SubTitle>
-
-        <Paragraph>
-          Optional array of values which re-initiates the callback function when
-          changed.
-        </Paragraph>
       </Section>
 
       <Section>

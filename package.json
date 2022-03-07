@@ -21,7 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.0.2",
-    "react-ui-animate": "^1.4.1",
+    "react-ui-animate": "^1.4.4",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "universal-cookie": "^4.0.4",
