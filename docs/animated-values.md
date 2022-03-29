@@ -1,0 +1,134 @@
+---
+sidebar_position: 3
+id: animated-values
+title: Animated Values
+---
+
+Animated Values are the fundamental concepts behind **react-ui-animate**. They carry animated data, providing easy way to drive animations.
+
+## Defining Animated Value
+
+useAnimatedValue is a hook that returns an object containing properties like: .value and .currentValue. Animated Value objects serve as references to pieces of shared animation data that can be accessed and modified using their .value property. It is important to remember that.value property must be used to modify or to read data. useAnimatedValue is similar to useRef, it also stores the data until the component is unmounted, does not lose data on other state changes and data modification is done without re-render.
+
+In order to create an Animated Value, you should use useAnimatedValue hook:
+
+```js
+const animationNode = useAnimatedValue(initialValue);
+```
+
+It returns a mutable object whose .value property is initialized to the passed argument initialValue. This can be any primitive like number or string.
+
+In order to update Animated Value, you should set a new value of same primitive type onto the .value property. The modification is sponteneous which shows the instant reactiveness.
+
+```jsx
+import { useAnimatedValue } from 'react-ui-animate';
+
+function SomeComponent() {
+  const animationNode = useAnimatedValue(0);
+
+  return (
+    <button onClick={() => (animationNode.value = Math.random())}>
+      Randomize
+    </button>
+  );
+}
+```
+
+In the above example we update value from intial value 0 to random values. Updates are automatically animated smoothly. Lets see an example:
+
+```jsx
+import { AnimatedBlock, useAnimatedValue } from 'react-ui-animate';
+
+export default function () {
+  const opacity = useAnimatedValue(0); // It initializes opacity object with value 0.
+
+  return (
+    <div>
+      {/* AnimatedBlock component can read useAnimatedValue() */}
+      <AnimatedBlock
+        style={{
+          opacity: opacity.value, // using opacity with value property
+          width: 100,
+          padding: 20,
+          background: '#39F',
+        }}
+      >
+        ANIMATED
+      </AnimatedBlock>
+
+      {/* Assigning value to 1 auto animates from initialized value 0 to 1 smoothly */}
+      <button onClick={() => (opacity.value = 1)}>Animate Me</button>
+    </div>
+  );
+}
+```
+
+In the above example when we click button, opacity is animated from 0 to 1 smoothly. As you can notice AnimatedBlock is used instead of any other HTML Element because the Animated Values cannot be read by HTML Elements, we need special type of Component that can read it. Here, we have AnimatedBlock HOC which is a div element and also can read Animated Values.
+
+## Mounting and Unmounting Components
+
+Second most important aspect of Animated Value is that they provide a way to handle mounting and unmounting of any component. Generally, we use state to handle mounting and unmounting, but we don't have a proper way to make transitions between mounting as well as unmounting. React UI Animate provides useMountedValue hook to handle these scenarios.
+
+To create Mounted Value, we use useMountedValue hook:
+
+```js
+const mountedFunction = useMountedValue(boolean, {
+  from: number,
+  enter: number,
+  exit: number,
+});
+```
+
+useMountedValue returns a function when a state and phases are passed as first and second arguments. The first argument must be a boolean state and second argument is an object with three phases property, from, enter and exit. The phases from, enter and exit are three numeric values which defines the transition lifecycle of a component when it mounts and unmounts.
+
+```jsx
+import { useState } from 'react';
+import { useMountedValue } from 'react-ui-animate';
+
+function SomeComponent() {
+  const [visible, setVisible] = useState(false);
+
+  const open = useMountedValue(visible, { from: 0, enter: 1, exit: 0 });
+
+  return (
+    <div>
+      <button onClick={() => setVisible((prev) => !prev)}>CLICK ME</button>
+    </div>
+  );
+}
+```
+
+In the above example, by default the state is visible = false and the phases are {from: 0, enter: 1, exit: 0}. Now, lets use the mounted function open with a component.
+
+```jsx
+import { useState } from 'react';
+import { useMountedValue } from 'react-ui-animate';
+
+function SomeComponent() {
+  const [visible, setVisible] = useState(false);
+
+  const open = useMountedValue(visible, { from: 0, enter: 1, exit: 0 });
+
+  return (
+    <div>
+      {open(
+        (animation, mounted) =>
+          mounted && (
+            <AnimatedBlock
+              style={{
+                width: 100,
+                height: 100,
+                backgroundColor: '#3399ff',
+                opacity: animation.value,
+              }}
+            />
+          )
+      )}
+
+      <button onClick={() => setVisible((prev) => !prev)}>CLICK ME</button>
+    </div>
+  );
+}
+```
+
+In the above example, open function receives a callback that receives two arguments: the Animated Value and a boolean respectively. The first argument, Animated Value animates from from = 0 to enter = 1 when the visible is true and enter = 1 to exit = 0 when visible is false. And the second argument, boolean dinamically determines whether the component is mounted or not after animation. AnimatedBlock HOC is used to read animated values.

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# About React UI Animate
+# Introduction
 
 React UI Animate is a react library that allows for creating smooth animations and gesture interactions.
 

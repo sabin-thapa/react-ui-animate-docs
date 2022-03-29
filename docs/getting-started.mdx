@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+id: getting-started
+title: Getting Started
+---
+
+Here, In this official documentation of React UI Animate, you will be able to understand the basic concept of animation on react / next with React UI Animate. It should cover enough for you to build quality animations on your react / next projects. It gives you all the necessary background that you need to dive deeper into the more advanced parts of React UI Animate. It covers all the basic concept of all APIs and API References provided by React UI Animate.
+
+## Pre-requisites
+
+If you are familier with Javascript and React, then you'll be able to get through this documentation easily. If not, then you can go through some basic knowledge of Javascript and React, then you are ready to go.
+
+## Requirements
+
+- `react` >= 16.13.1
+- `react-dom` >= 16.13.1
+
+## Installation
+
+In you project directory, run:
+
+```bash
+# npm
+npm install react-ui-animate
+```
+
+After installation you are ready to implement your own gestures and animation on your project. Let's write a simple demo where an elements opacity is animated from 0 to 1 when we click a button:
+
+```jsx
+import { AnimatedBlock, useAnimatedValue } from 'react-ui-animate';
+
+export const Animation = () => {
+  return (
+    <div>
+      {/* Assigning value to 1 auto animates from initialized value 0 to 1 smoothly */}
+      <button onClick={() => (opacity.value = 1)}>Animate Me</button>
+    </div>
+  );
+};
+
+<Animation />;
+```
+
+In next section we will cover **Animated Values**.
