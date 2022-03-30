@@ -31,8 +31,9 @@ export const Example = () => {
       <Grid container spacing={2}>
         <Grid item>
           <ButtonGroup variant="contained" aria-label="outlined button group">
-            <Button onClick={() => (left.value = 0)}>Animate Left</Button>
-            <Button onClick={() => (left.value = 500)}>Animate Right</Button>
+            <Button onClick={() => (left.value = Math.random() * 500)}>
+              Randomize!
+            </Button>
           </ButtonGroup>
         </Grid>
       </Grid>

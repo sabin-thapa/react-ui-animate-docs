@@ -24,7 +24,15 @@ In you project directory, run:
 npm install react-ui-animate
 ```
 
-After installation you are ready to implement your own gestures and animation on your project. Let's write a simple demo where an elements left property is animated from 0 to 500 when we click a button:
+After installation you are ready to implement your own gestures and animation on your project.
+
+### Example
+
+import { Example } from '@site/src/components/GettingStartedExamples';
+
+<Example />
+
+The following example shows how we can apply the animation node to an element and how to update it. Let's say we update the `left` from `0 to 500`.
 
 ```jsx
 import { AnimatedBlock, useAnimatedValue } from 'react-ui-animate';
@@ -40,10 +48,11 @@ export const Example = () => {
           height: 100,
           background: '#39F',
           position: 'relative',
-          left: left.value,
+          left: left.value, // apply it here with .value property
         }}
       />
 
+      {/* Apply animation by assigning the value */}
       <Button onClick={() => (left.value = 0)}>Animate Left</Button>
 
       <Button onClick={() => (left.value = 500)}>Animate Right</Button>
@@ -51,9 +60,5 @@ export const Example = () => {
   );
 };
 ```
-
-import { Example } from '@site/src/components/GettingStartedExamples';
-
-<Example />
 
 In next section we will cover **Animated Values**.
