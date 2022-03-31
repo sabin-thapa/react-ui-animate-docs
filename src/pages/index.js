@@ -20,6 +20,12 @@ function HomepageHeader() {
           >
             Get Started
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="https://github.com/dipeshrai123/react-ui-animate"
+          >
+            Try It
+          </Link>
         </div>
       </div>
     </header>
@@ -31,7 +37,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="React Library for Gestures and Animation"
     >
       <HomepageHeader />
       <main>
