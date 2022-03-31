@@ -8,28 +8,25 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        React UI Animate is designed with easy to use APIs for implementing
+        gestures and animations.
       </>
     ),
   },
   {
-    title: 'Animate',
+    title: 'Animate anything',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <>React UI Animate helps you to animate anything beautifully.</>
     ),
   },
   {
-    title: 'Interact',
+    title: 'Interact with anything',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        React UI Animate comes with variaties of APIs to implement very complex
+        gestures in easy way.
       </>
     ),
   },
