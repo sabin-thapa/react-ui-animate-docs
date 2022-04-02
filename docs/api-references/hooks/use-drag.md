@@ -12,6 +12,8 @@ Due to time constraint, we couldn't complete this page. We will complete as soon
 
 This hook provides a way to make any `HTMLElement` draggable.
 
+## Arguments
+
 #### `callback` [ function ]
 
 First argument is a callback function with a drag `event` object as its first argument which is called on every drag event.
