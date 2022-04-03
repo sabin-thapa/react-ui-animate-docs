@@ -1,0 +1,64 @@
+---
+sidebar_position: 2
+id: getting-started
+title: Getting Started
+---
+
+:::info
+
+Due to time constraint, we couldn't complete this page. We will complete as soon as possible.
+
+:::
+
+Here, In this official documentation of React UI Animate, you will be able to understand the basic concept of animation on react / next with React UI Animate. It should cover enough for you to build quality animations on your react / next projects. It gives you all the necessary background that you need to dive deeper into the more advanced parts of React UI Animate. It covers all the basic concept of all APIs and API References provided by React UI Animate.
+
+## Pre-requisites
+
+If you are familier with Javascript and React, then you'll be able to get through this documentation easily. If not, then you can go through some basic knowledge of Javascript and React, then you are ready to go.
+
+## Requirements
+
+- `react` >= 16.13.1
+- `react-dom` >= 16.13.1
+
+## Installation
+
+In you project directory, run:
+
+```bash
+# npm
+npm install react-ui-animate
+```
+
+After installation you are ready to implement your own gestures and animation on your project.
+
+The following example shows how we can apply the animation node to an element and how to update it. Let's say we update the `left` from `0 to 500`.
+
+```jsx
+import { AnimatedBlock, useAnimatedValue } from 'react-ui-animate';
+
+export const Example = () => {
+  const left = useAnimatedValue(0); // initialize animated node here with initial value 0
+
+  return (
+    <>
+      <AnimatedBlock
+        style={{
+          width: 100,
+          height: 100,
+          background: '#39F',
+          position: 'relative',
+          left: left.value, // apply it here with .value property
+        }}
+      />
+
+      {/* Apply animation by assigning the value */}
+      <Button onClick={() => (left.value = 0)}>Animate Left</Button>
+
+      <Button onClick={() => (left.value = 500)}>Animate Right</Button>
+    </>
+  );
+};
+```
+
+In next section we will cover **Animated Values**.

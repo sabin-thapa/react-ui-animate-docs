@@ -56,11 +56,11 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          // {
-          //   type: 'docsVersionDropdown',
-          //   dropdownActiveClassDisabled: true,
-          //   position: 'right',
-          // },
+          {
+            type: 'docsVersionDropdown',
+            dropdownActiveClassDisabled: true,
+            position: 'right',
+          },
           {
             href: 'https://github.com/dipeshrai123/react-ui-animate',
             label: 'GitHub',
