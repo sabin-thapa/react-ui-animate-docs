@@ -4,6 +4,12 @@ id: intro
 title: Introduction
 ---
 
+:::info
+
+Due to time constraint, we couldn't complete this page. We will complete as soon as possible.
+
+:::
+
 React UI Animate is a react library that allows for creating smooth animations and gesture interactions.
 
 ## Motivation and Library overview

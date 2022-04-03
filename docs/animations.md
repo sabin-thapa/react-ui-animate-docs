@@ -4,6 +4,12 @@ id: animations
 title: Animations
 ---
 
+:::info
+
+Due to time constraint, we couldn't complete this page. We will complete as soon as possible.
+
+:::
+
 Animations are very important to create a great user experience. Objects in motion have momentum and rarely come to stop immediately. To convey physically believable motion, we need physics based animations. The library provides a way to implement any physically behaving animations.
 
 In the previous article about `Animated Values`, we learned about `useAnimatedValue` hook. We also learned how to perform animated transitions by assigning values to a Animated Values. This, however, is not the only way how animations can be implemented. React UI Animate provides a number of ways how animations can be customized and implemented. In this article, we explore different ways to implement animated transitions and how customizations can be done in an animation.
