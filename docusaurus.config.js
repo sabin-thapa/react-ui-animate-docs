@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/react-ui-animate.ico',
   organizationName: 'dipeshrai123', // Usually your GitHub org/user name.
   projectName: 'react-ui-animate-docs', // Usually your repo name.
-
+  trailingSlash: false,
   presets: [
     [
       'classic',
