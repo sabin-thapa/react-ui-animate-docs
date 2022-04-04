@@ -24,24 +24,24 @@ The first argument takes the initial value, which could be any of the primitive 
 
 Optional `object` containing the animation configuration. Allowed parameters are listed below:
 
-| Options        | Default   | Description                                                                                                    |
-| -------------- | --------- | -------------------------------------------------------------------------------------------------------------- |
-| animationType  | "ease"    | Default spring type animation                                                                                  |
-| mass           | 1         | Spring mass                                                                                                    |
-| friction       | 26        | Spring friction                                                                                                |
-| tension        | 170       | Spring energy                                                                                                  |
-| immediate      | false     | If true, the animation is not applied rather updates are immediate.                                            |
-| duration       | undefined | How long the animation should last, if > than 0 switch to a duration-based animation instead of spring physics |
-| easing         | t => t    | Linear by default, you can use Easing module.                                                                  |
-| onAnimationEnd | undefined | Function called after animation is completed.                                                                  |
-| listener       | undefined | Function called every time the value is updated.                                                               |
+| Options   | Default   | Description                                                                                                    |
+| --------- | --------- | -------------------------------------------------------------------------------------------------------------- |
+| mass      | 1         | Spring mass                                                                                                    |
+| friction  | 26        | Spring friction                                                                                                |
+| tension   | 170       | Spring energy                                                                                                  |
+| immediate | false     | If true, the animation is not applied rather updates are immediate.                                            |
+| duration  | undefined | How long the animation should last, if > than 0 switch to a duration-based animation instead of spring physics |
+| easing    | t => t    | Linear by default when `duration` is defined, you can use `Easing` module.                                     |
+| onStart   | undefined | Function called on start of animation with numeric value.                                                      |
+| onChange  | undefined | Function called every time the value is updated with numeric value.                                            |
+| onRest    | undefined | Function called when the animation completes with object `{ finished: boolean, value: number }`.               |
 
 ## Returns
 
-Returns a reference to the Animated Value with the provided data. The value can be updated and read by HOCs using `.value` attribute. To read current value for conditional operations, we use `.currentValue`. We can do immediate update by passing object to `.value` property.
+Returns a reference to the Animated Value with the provided data. The value can be updated and read by HOCs using `.value` attribute. To read current value for conditional operations, we use `.currentValue`.
 
 ```jsx
-opacity.value = { toValue: 100, immediate: true };
+opacity.value = 100;
 ```
 
 ## Example
