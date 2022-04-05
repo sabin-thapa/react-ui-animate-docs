@@ -14,7 +14,7 @@ React UI Animate is a react library that allows for creating smooth animations a
 
 ## Motivation and Library overview
 
-In todays world, interactive and smooth web applications are preferred by everyone. Animations on web without any performance drops is very important and also we want controlled animations.
+Animations on web without any performance drops is very important and we also want controlled animations.
 
 This library represents a modern approach to animation. It is very much inspired by **`framer-motion`** & **`react-native-reanimated`**. It provides very ease of use APIs to implement physics based spring and duration based timing animations with performance. It also provides different hooks to implement gestures on web.
 

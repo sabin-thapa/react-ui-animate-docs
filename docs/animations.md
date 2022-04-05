@@ -82,13 +82,13 @@ export default function () {
 
 ## Configuring Animations
 
-Basically, React UI Animate provides two types of animation configurations: `Timing` and `Spring` based animations. `Timing` based animations depends upon duration while Spring based animations are naturally balanced and depends upon properties of an object. By default, Animated Values in React UI Animate implements `Spring` based animation. `useAnimatedValue` hook accepts a second optional argument which is an object different animation configurations. To simply modify the nature of spring animation we can define `animationType` property.
-
-`animationType` property accepts a string of values like ease, elastic, wooble, etc. Default value is `ease`.
+Basically, React UI Animate provides two types of animation configurations: `Timing` and `Spring` based animations. `Timing` based animations depends upon duration while Spring based animations are naturally balanced and depends upon properties of an object. By default, Animated Values in React UI Animate implements `Spring` based animation. `useAnimatedValue` hook accepts a second optional argument which is an object different animation configurations. To simply modify the nature animation we can use `AnimationConfigUtils` from `reac-ui-animate` which has some pre-defined list of animation types.
 
 ```jsx
-const opacity = useAnimatedValue(0, { animationType: 'elastic' });
+const opacity = useAnimatedValue(0, { ...AnimationConfigUtils.ELASTIC });
 ```
+
+Some other pre-defined animation configs are: `EASE`, `BOUNCE`, `STIFF`, `POWER`, `WOOBLE`, etc.
 
 Aditionally, You can also define custom spring configurations by modifying properties: `mass`, `friction` and `tension`
 
