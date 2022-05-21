@@ -1,0 +1,39 @@
+.hover-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-menu-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: gray;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-menu-body:hover {
+  background-color: white;
+  color: black;
+}
+
+.hover-menu-options {
+  position: absolute;
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.hover-menu-options:first-child {
+  left: 0px;
+  bottome: 20px;
+}
