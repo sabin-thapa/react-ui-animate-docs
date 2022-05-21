@@ -5,15 +5,24 @@ import { TransitionBlock, interpolate, AnimatedBlock } from "react-ui-animate";
 
 export const HoverMenu = () => {
   const [open, setOpen] = useState(false);
+  const [bounce, setBounce] = useState(true);
 
   return (
     <div className="hover-menu-container">
       <div
-        className="hover-menu-body"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        className={
+          bounce ? "hover-menu-body hover-menu-bounce" : "hover-menu-body"
+        }
+        onMouseEnter={() => {
+          setOpen(true);
+          setBounce(false);
+        }}
+        onMouseLeave={() => {
+          setOpen(false);
+          setBounce(true);
+        }}
       >
-        Explore
+        <h4 className="hover-menu-name">Explore</h4>
         <div className="hover-menu-options">
           <TransitionBlock state={open}>
             {(animation) => (

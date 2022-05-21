@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  height: 300px;
+  font-smooth: 10px;
+  box-sizing: border-box;
 }
 
 .hover-menu-body {
@@ -13,11 +15,45 @@
   background-color: gray;
   height: 100px;
   width: 100px;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 50%;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.hover-menu-bounce {
+  animation: bounceicon 0.7s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounceicon {
+  0% {
+    transform: translateY(0);
+
+    height: 90px;
+    width: 110px;
+  }
+  25% {
+    transform: translateY(-2px);
+    width: 105px;
+    height: 95px;
+  }
+  50% {
+    transform: translateY(-5px);
+    height: 110px;
+    width: 90px;
+  }
+  75% {
+    transform: translateY(-8px);
+    height: 105px;
+    width: 95px;
+  }
+  100% {
+    transform: translateY(-10px);
+    width: 90px;
+    height: 110px;
+  }
 }
 
 .hover-menu-body:hover {
@@ -25,6 +61,11 @@
   color: black;
   border: 1px solid gray;
 }
+
+/* .hover-menu-name {
+  position: absolute;
+  top: 40px;
+} */
 
 .hover-menu-options {
   position: absolute;
