@@ -10,9 +10,8 @@ export const HoverMenu = () => {
     <div className="hover-menu-container">
       <div
         className="hover-menu-body"
-        // onMouseDownCapture={() => setOpen(true)}
-        // onFocusCapture={() => setOpen(true)}
-        onClick={() => setOpen((prev) => !prev)}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
       >
         Explore
         <div className="hover-menu-options">
