@@ -15,13 +15,13 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--md"
             to="/docs/intro"
           >
             Get Started
           </Link>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--md"
             to="https://github.com/dipeshrai123/react-ui-animate"
           >
             Try It
